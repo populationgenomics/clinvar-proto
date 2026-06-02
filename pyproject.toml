@@ -1,0 +1,11 @@
+[project]
+name = "clinvar-proto-generator"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = ["xsdformer"]
+
+[tool.uv.sources]
+xsdformer = { path = "../xsd-former" }
