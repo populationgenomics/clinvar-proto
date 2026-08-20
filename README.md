@@ -32,7 +32,8 @@ json_str = model.model_dump_json()  # pydantic -> JSON
 
 The converters take any ElementTree-like element, so `lxml` is the consumer's choice, not a dependency of the wheel
 (`clinvar_proto` needs only `protobuf` and `pydantic`). Release files are large, so consumers normally stream them with
-`lxml.etree.iterparse` on `VariationArchive` and convert one element at a time.
+`lxml.etree.iterparse` on `VariationArchive` and convert one element at a time. Use lxml >= 6.1 if you do: earlier
+releases resolve external entities by default in `iterparse` (CVE-2026-41066).
 
 The package exposes four modules (all typed; ships `py.typed`):
 
