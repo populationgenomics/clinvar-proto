@@ -24,7 +24,7 @@ testpaths = ["tests"]
 
 # The generated tree (generated/) is gitignored and not linted; the only
 # first-party Python here is the test suite. Config mirrors the CPG standard
-# (litfetch / themis-internal), scoped down to what this repo carries.
+# (litfetch), scoped down to what this repo carries.
 [tool.ruff]
 line-length = 120
 target-version = "py311"

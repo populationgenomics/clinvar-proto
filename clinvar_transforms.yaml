@@ -45,7 +45,7 @@ comments:
     Germline classification following ACMG/AMP five-tier criteria: Pathogenic, Likely pathogenic,
     Uncertain significance, Likely benign, Benign. May also be 'Conflicting classifications of
     pathogenicity' when submitters disagree. See
-    https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.
+    https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
   AggregatedGermlineClassification.explanation: >-
     Populated only when description is 'conflicting data from submitters'. Summarizes the
     nature of the conflict across SCVs.
@@ -54,7 +54,7 @@ comments:
     Oncogenicity classification following ClinGen/CGC/VICC five-tier criteria: Oncogenic, Likely
     oncogenic, Uncertain significance, Likely benign, Benign. May also be 'Conflicting
     classifications' when submitters disagree. See
-    https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.
+    https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
   AggregatedOncogenicityClassification.explanation: >-
     Populated only when description is 'conflicting data from submitters'. Summarizes the
     nature of the conflict across SCVs.
@@ -63,7 +63,7 @@ comments:
     Somatic clinical impact classification following AMP/ASCO/CAP four-tier criteria: Tier I -
     Strong clinical significance, Tier II - Potential clinical significance, Tier III - Unknown
     clinical significance, Tier IV - Benign/likely benign. See
-    https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.
+    https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
   AggregatedSomaticClinicalImpact.review_status: Aggregate review status (star rating) from all somatic clinical impact submissions for this variant.
   Allele: >-
     A single sequence change (simple allele) relative to a reference. Has an AlleleID that
@@ -242,21 +242,21 @@ comments:
   Sample.somatic_variant_allele_fraction: Variant allele fraction (VAF) of the somatic variant in the sample.
   SingleGermlineClassification.description: >-
     Germline classification from a single submitter, following ACMG/AMP five-tier criteria.
-    See https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.
+    See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
   SingleGermlineClassification.explanation: >-
     Populated only when description is 'conflicting data from submitters'. Summarizes the
     nature of the conflict.
   SingleGermlineClassification.review_status: Review status (star rating) from this single germline submission.
   SingleOncogenicityClassification.description: >-
     Oncogenicity classification from a single submitter, following ClinGen/CGC/VICC five-tier criteria.
-    See https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.
+    See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
   SingleOncogenicityClassification.explanation: >-
     Populated only when description is 'conflicting data from submitters'. Summarizes the
     nature of the conflict.
   SingleOncogenicityClassification.review_status: Review status (star rating) from this single oncogenicity submission.
   SingleSomaticClinicalImpact.description: >-
     Somatic clinical impact classification from a single submitter, following AMP/ASCO/CAP
-    four-tier criteria. See https://github.com/ncbi/clinvar/ClassificationOnClinVar.md.
+    four-tier criteria. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
   SingleSomaticClinicalImpact.review_status: Review status (star rating) from this single somatic clinical impact submission.
   SoftwareSet: Description of software used in variant analysis, including version and purpose.
   SoftwareSet.purpose: Purpose of the software, e.g. 'alignment', 'variant calling', 'annotation'.

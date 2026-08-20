@@ -7,8 +7,7 @@ usage and release steps.
 ## Working norms
 
 Operating directives for Claude (and any agent) in this repo; they counteract
-default model dispositions. These match the CPG standard (see `litfetch` /
-`themis-internal`).
+default model dispositions. These match the CPG standard (see `litfetch`).
 
 - **Resist the minimal-diff reflex.** Aim for the correct fix at the right
   complexity level — not the smallest change that hides a symptom, not
