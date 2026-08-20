@@ -77,6 +77,11 @@ The vendored file is byte-identical to upstream
 works and public domain in the United States; the MIT `LICENSE` in this repo
 covers CPG's own files (transforms, generator wiring, tests), not the NCBI XSD.
 
+Courtesy of the U.S. National Library of Medicine. NLM/NCBI does not endorse
+this package. The vendored XSD and the ClinVar records under `tests/records/`
+are pinned snapshots and do not necessarily reflect the most current data
+available from NCBI — fetch from NCBI directly for current data.
+
 The XSD is **vendored deliberately, not fetched at build time**: pinning the
 exact bytes keeps the generated schema reproducible, and NCBI's XSD version is
 bumped in place under a new filename rather than being immutable per release.
