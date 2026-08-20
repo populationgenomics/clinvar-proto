@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+                        
+<ClinVarResult-Set><VariationArchive VariationID="638805" VariationName="CYP2C19*23/*23" VariationType="Diplotype" Accession="VCV000638805" Version="3" RecordType="classified" NumberOfSubmissions="4" NumberOfSubmitters="1" DateLastUpdated="2026-07-27" DateCreated="2019-06-17" MostRecentSubmission="2019-06-17">
+  <RecordStatus>current</RecordStatus>
+  <Species>Homo sapiens</Species>
+  <ClassifiedRecord>
+    <Genotype VariationID="638805">
+      <Haplotype VariationID="634042" NumberOfChromosomes="1">
+        <SimpleAllele AlleleID="622285" VariationID="634042">
+          <GeneList>
+            <Gene Symbol="CYP2C19" FullName="cytochrome P450 family 2 subfamily C member 19" GeneID="1557" HGNC_ID="HGNC:2621" Source="submitted" RelationshipType="within single gene">
+              <Location>
+                <CytogeneticLocation>10q23.33</CytogeneticLocation>
+                <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="10" Accession="NC_000010.11" start="94762681" stop="94855547" display_start="94762681" display_stop="94855547" Strand="+"/>
+                <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="10" Accession="NC_000010.10" start="96522462" stop="96612670" display_start="96522462" display_stop="96612670" Strand="+"/>
+              </Location>
+              <OMIM>124020</OMIM>
+            </Gene>
+          </GeneList>
+          <Name>NM_000769.4(CYP2C19):c.271G&gt;C (p.Gly91Arg)</Name>
+          <CanonicalSPDI>NC_000010.11:94775159:G:C</CanonicalSPDI>
+          <VariantType>single nucleotide variant</VariantType>
+          <Location>
+            <CytogeneticLocation>10q23.33</CytogeneticLocation>
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" forDisplay="true" AssemblyStatus="current" Chr="10" Accession="NC_000010.11" start="94775160" stop="94775160" display_start="94775160" display_stop="94775160" variantLength="1" positionVCF="94775160" referenceAlleleVCF="G" alternateAlleleVCF="C"/>
+            <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="10" Accession="NC_000010.10" start="96534917" stop="96534917" display_start="96534917" display_stop="96534917" variantLength="1" positionVCF="96534917" referenceAlleleVCF="G" alternateAlleleVCF="C"/>
+          </Location>
+          <ProteinChange>G91R</ProteinChange>
+          <HGVSlist>
+            <HGVS Assembly="GRCh37" Type="genomic, top-level">
+              <NucleotideExpression sequenceAccessionVersion="NC_000010.10" sequenceAccession="NC_000010" sequenceVersion="10" change="g.96534917G&gt;C" Assembly="GRCh37">
+                <Expression>NC_000010.10:g.96534917G&gt;C</Expression>
+              </NucleotideExpression>
+            </HGVS>
+            <HGVS Assembly="GRCh38" Type="genomic, top-level">
+              <NucleotideExpression sequenceAccessionVersion="NC_000010.11" sequenceAccession="NC_000010" sequenceVersion="11" change="g.94775160G&gt;C" Assembly="GRCh38">
+                <Expression>NC_000010.11:g.94775160G&gt;C</Expression>
+              </NucleotideExpression>
+            </HGVS>
+            <HGVS Type="genomic">
+              <NucleotideExpression sequenceAccessionVersion="NG_008384.3" sequenceAccession="NG_008384" sequenceVersion="3" change="g.17480G&gt;C">
+                <Expression>NG_008384.3:g.17480G&gt;C</Expression>
+              </NucleotideExpression>
+            </HGVS>
+            <HGVS Type="coding">
+              <NucleotideExpression sequenceAccessionVersion="NM_000769.4" sequenceAccession="NM_000769" sequenceVersion="4" change="c.271G&gt;C" MANESelect="true">
+                <Expression>NM_000769.4:c.271G&gt;C</Expression>
+              </NucleotideExpression>
+              <ProteinExpression sequenceAccessionVersion="NP_000760.1" sequenceAccession="NP_000760" sequenceVersion="1" change="p.Gly91Arg" singleLetterProteinChange="G91R">
+                <Expression>NP_000760.1:p.Gly91Arg</Expression>
+              </ProteinExpression>
+              <MolecularConsequence ID="SO:0001583" Type="missense variant" DB="SO"/>
+            </HGVS>
+          </HGVSlist>
+          <Classifications>
+            <GermlineClassification DateCreated="2019-06-14" MostRecentSubmission="2025-08-01" NumberOfSubmissions="1" NumberOfSubmitters="1">
+              <ReviewStatus>practice guideline</ReviewStatus>
+              <Description>drug response</Description>
+              <Explanation DataSource="ClinVar" Type="public">drug response (1)</Explanation>
+              <Citation Type="general">
+                <URL>https://cpicpgx.org</URL>
+              </Citation>
+              <Citation Type="general">
+                <URL>https://www.pharmgkb.org/haplotype/PA166160944</URL>
+              </Citation>
+              <DescriptionHistory Dated="2019-08-13">
+                <Description>no classification for the single variant</Description>
+              </DescriptionHistory>
+              <ConditionList>
+                <TraitSet ID="47606" Type="DrugResponse" ContributesToAggregateClassification="true">
+                  <Trait ID="41907" Type="DrugResponse">
+                    <Name>
+                      <ElementValue Type="Preferred">CYP2C19: uncertain function</ElementValue>
+                      <XRef ID="PA166160951" DB="Clinical Pharmacogenetics Implementation Consortium"/>
+                    </Name>
+                  </Trait>
+                </TraitSet>
+              </ConditionList>
+            </GermlineClassification>
+          </Classifications>
+          <XRefList>
+            <XRef Type="Interpreted" ID="634042" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634043" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634049" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634058" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634066" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634073" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634110" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634111" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634112" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634113" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634114" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634115" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634116" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634118" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634119" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634144" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634160" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634171" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634178" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634185" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634196" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634256" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634276" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634280" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634286" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634289" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634290" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634315" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634330" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634332" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634334" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634337" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634407" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="634419" DB="ClinVar"/>
+            <XRef Type="Interpreted" ID="638805" DB="ClinVar"/>
+            <XRef Type="rs" ID="118203756" DB="dbSNP"/>
+          </XRefList>
+          <AlleleFrequencyList>
+            <AlleleFrequency Value="0.00000" Source="The Genome Aggregation Database (gnomAD), exomes"/>
+            <AlleleFrequency Value="0.00001" Source="Trans-Omics for Precision Medicine (TOPMed)"/>
+            <AlleleFrequency Value="0.00002" Source="Exome Aggregation Consortium (ExAC)"/>
+            <AlleleFrequency Value="0.00002" Source="The Genome Aggregation Database (gnomAD)"/>
+            <AlleleFrequency Value="0.00002" Source="The Genome Aggregation Database (gnomAD), exomes"/>
+            <AlleleFrequency Value="0.00003" Source="The Genome Aggregation Database (gnomAD)"/>
+          </AlleleFrequencyList>
+        </SimpleAllele>
+        <Name>CYP2C19*23</Name>
+        <VariationType>Haplotype, single variant</VariationType>
+        <Classifications>
+          <GermlineClassification DateCreated="2019-06-14" MostRecentSubmission="2025-08-01" NumberOfSubmissions="1" NumberOfSubmitters="1">
+            <ReviewStatus>practice guideline</ReviewStatus>
+            <Description>drug response</Description>
+            <Explanation DataSource="ClinVar" Type="public">drug response (1)</Explanation>
+            <Citation Type="general">
+              <URL>https://cpicpgx.org</URL>
+            </Citation>
+            <Citation Type="general">
+              <URL>https://www.pharmgkb.org/haplotype/PA166160944</URL>
+            </Citation>
+            <DescriptionHistory Dated="2019-08-13">
+              <Description>no classification for the single variant</Description>
+            </DescriptionHistory>
+            <ConditionList>
+              <TraitSet ID="47606" Type="DrugResponse" ContributesToAggregateClassification="true">
+                <Trait ID="41907" Type="DrugResponse">
+                  <Name>
+                    <ElementValue Type="Preferred">CYP2C19: uncertain function</ElementValue>
+                    <XRef ID="PA166160951" DB="Clinical Pharmacogenetics Implementation Consortium"/>
+                  </Name>
+                </Trait>
+              </TraitSet>
+            </ConditionList>
+          </GermlineClassification>
+        </Classifications>
+        <XRefList>
+          <XRef Type="Interpreted" ID="634043" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634049" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634058" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634066" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634073" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634110" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634111" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634112" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634113" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634114" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634115" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634116" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634118" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634119" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634144" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634160" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634171" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634178" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634185" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634196" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634256" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634276" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634280" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634286" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634289" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634290" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634315" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634330" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634332" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634334" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634337" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634407" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="634419" DB="ClinVar"/>
+          <XRef Type="Interpreted" ID="638805" DB="ClinVar"/>
+        </XRefList>
+      </Haplotype>
+      <Name>CYP2C19*23/*23</Name>
+      <VariationType>Diplotype</VariationType>
+    </Genotype>
+    <RCVList>
+      <RCVAccession Title="CYP2C19*23/*23 AND Citalopram response" Accession="RCV000784127" Version="11">
+        <ClassifiedConditionList TraitSetID="20888">
+          <ClassifiedCondition DB="MedGen" ID="CN221263">Citalopram response</ClassifiedCondition>
+        </ClassifiedConditionList>
+        <RCVClassifications>
+          <GermlineClassification>
+            <ReviewStatus>practice guideline</ReviewStatus>
+            <Description SubmissionCount="1">drug response</Description>
+          </GermlineClassification>
+        </RCVClassifications>
+      </RCVAccession>
+      <RCVAccession Title="CYP2C19*23/*23 AND Escitalopram response" Accession="RCV000784128" Version="11">
+        <ClassifiedConditionList TraitSetID="21569">
+          <ClassifiedCondition DB="MedGen" ID="CN221264">Escitalopram response</ClassifiedCondition>
+        </ClassifiedConditionList>
+        <RCVClassifications>
+          <GermlineClassification>
+            <ReviewStatus>practice guideline</ReviewStatus>
+            <Description SubmissionCount="1">drug response</Description>
+          </GermlineClassification>
+        </RCVClassifications>
+      </RCVAccession>
+      <RCVAccession Title="CYP2C19*23/*23 AND Sertraline response" Accession="RCV000784507" Version="11">
+        <ClassifiedConditionList TraitSetID="20745">
+          <ClassifiedCondition DB="MedGen" ID="CN221265">Sertraline response</ClassifiedCondition>
+        </ClassifiedConditionList>
+        <RCVClassifications>
+          <GermlineClassification>
+            <ReviewStatus>practice guideline</ReviewStatus>
+            <Description SubmissionCount="1">drug response</Description>
+          </GermlineClassification>
+        </RCVClassifications>
+      </RCVAccession>
+      <RCVAccession Title="CYP2C19*23/*23 AND Voriconazole response" Accession="RCV000784658" Version="11">
+        <ClassifiedConditionList TraitSetID="6765">
+          <ClassifiedCondition DB="MedGen" ID="CN077957">Voriconazole response</ClassifiedCondition>
+        </ClassifiedConditionList>
+        <RCVClassifications>
+          <GermlineClassification>
+            <ReviewStatus>practice guideline</ReviewStatus>
+            <Description SubmissionCount="1">drug response</Description>
+          </GermlineClassification>
+        </RCVClassifications>
+      </RCVAccession>
+    </RCVList>
+    <Classifications>
+      <GermlineClassification NumberOfSubmissions="4" NumberOfSubmitters="1" DateCreated="2019-06-17" MostRecentSubmission="2019-06-17">
+        <ReviewStatus>practice guideline</ReviewStatus>
+        <Description>drug response</Description>
+        <Explanation DataSource="ClinVar" Type="public">drug response (4)</Explanation>
+        <Citation Type="general" Abbrev="CPIC, 2015">
+          <ID Source="PubMed">25974703</ID>
+          <ID Source="pmc">4512908</ID>
+        </Citation>
+        <Citation Type="general" Abbrev="CPIC, 2016">
+          <ID Source="PubMed">27981572</ID>
+          <ID Source="pmc">5474211</ID>
+        </Citation>
+        <Citation Type="general">
+          <URL>https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/</URL>
+          <CitationText>CPIC® Guideline for Selective Serotonin Reuptake Inhibitors and CYP2D6 and CYP2C19 https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/</CitationText>
+        </Citation>
+        <Citation Type="general">
+          <URL>https://cpicpgx.org/guidelines/guideline-for-voriconazole-and-cyp2c19/</URL>
+        </Citation>
+        <Citation Type="general">
+          <URL>https://www.pharmgkb.org/guideline/PA166127638</URL>
+        </Citation>
+        <Citation Type="general">
+          <URL>https://www.pharmgkb.org/guideline/PA166127639</URL>
+        </Citation>
+        <Citation Type="general">
+          <URL>https://www.pharmgkb.org/guideline/PA166161537</URL>
+        </Citation>
+        <ConditionList>
+          <TraitSet ID="6765" Type="Disease" ContributesToAggregateClassification="true">
+            <Trait ID="16405" Type="DrugResponse">
+              <Name>
+                <ElementValue Type="Preferred">Voriconazole response</ElementValue>
+              </Name>
+              <Name>
+                <ElementValue Type="Alternate">Vfend response</ElementValue>
+              </Name>
+              <AttributeSet>
+                <Attribute Type="public definition">Voriconazole is a triazole antifungal agent active against a variety of fungi and molds. While it is generally well-tolerated and effective, it has a narrow therapeutic window making it difficult to dose correctly. CYP2C19 is the primary enzyme responsible for the metabolism of the drug, and variations within the CYP2C19 gene may affect voriconazole exposure. CYP2C19 ultrarapid and rapid metabolizers may have increased metabolism of the drug, resulting in a reduced likelihood of attaining therapeutic voriconazole concentrations, while poor metabolizers may have decreased metabolism of the drug, resulting in an increased likelihood for adverse effects. Therapeutic guidelines for voriconazole based on CYP2C19 genotype have been published in Clinical Pharmacology and Therapeutics by the Clinical Pharmacogenetics Implementation Consortium (CPIC) and are available on the ClinPGx website.</Attribute>
+              </AttributeSet>
+              <Citation Type="general" Abbrev="DPWG, 2011">
+                <ID Source="PubMed">21412232</ID>
+              </Citation>
+              <Citation Type="general" Abbrev="CPIC, 2016">
+                <ID Source="PubMed">27981572</ID>
+                <ID Source="pmc">5474211</ID>
+              </Citation>
+              <Citation Type="review" Abbrev="Medical Genetics Summaries">
+                <ID Source="BookShelf">NBK552035</ID>
+              </Citation>
+              <XRef ID="CN077957" DB="MedGen"/>
+            </Trait>
+          </TraitSet>
+          <TraitSet ID="20888" Type="Disease" ContributesToAggregateClassification="true">
+            <Trait ID="32266" Type="DrugResponse">
+              <Name>
+                <ElementValue Type="Preferred">Citalopram response</ElementValue>
+              </Name>
+              <Name>
+                <ElementValue Type="Alternate">Celexa response</ElementValue>
+              </Name>
+              <AttributeSet>
+                <Attribute Type="public definition">Serotonin reuptake inhibitor antidepressants, such as selective serotonin reuptake inhibitors (SSRIs), serotonin and norepinephrine reuptake inhibitors (SNRIs), and serotonin modulators with SSRI-like properties are pharmacotherapy options for major depressive and anxiety disorders. Inadequate response and treatment-related adverse events are known challenges in antidepressant therapy. Genetic variations in genes encoding the drug metabolizing enzymes, CYP2D6, CYP2C19 and CYP2B6, have been shown to alter antidepressant biotransformation, which may potentially affect dosing, efficacy, and tolerability.</Attribute>
+                <XRef Type="drug" ID="PA449015" DB="ClinPGx"/>
+              </AttributeSet>
+              <Citation Type="general" Abbrev="DPWG, 2011">
+                <ID Source="PubMed">21412232</ID>
+              </Citation>
+              <Citation Type="general" Abbrev="CPIC, 2015">
+                <ID Source="PubMed">25974703</ID>
+                <ID Source="pmc">4512908</ID>
+              </Citation>
+              <Citation Type="practice guideline" Abbrev="CPIC, 2023">
+                <URL>https://cpicpgx.org/guidelines/cpic-guideline-for-ssri-and-snri-antidepressants/</URL>
+                <CitationText>CPIC® Guideline for Serotonin Reuptake Inhibitor Antidepressants and CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A, 2023</CitationText>
+              </Citation>
+              <XRef ID="CN221263" DB="MedGen"/>
+            </Trait>
+          </TraitSet>
+          <TraitSet ID="20745" Type="DrugResponse" ContributesToAggregateClassification="true">
+            <Trait ID="32268" Type="DrugResponse">
+              <Name>
+                <ElementValue Type="Preferred">Sertraline response</ElementValue>
+              </Name>
+              <Name>
+                <ElementValue Type="Alternate">Zoloft response</ElementValue>
+              </Name>
+              <AttributeSet>
+                <Attribute Type="public definition">Serotonin reuptake inhibitor antidepressants, such as selective serotonin reuptake inhibitors (SSRIs), serotonin and norepinephrine reuptake inhibitors (SNRIs), and serotonin modulators with SSRI-like properties are pharmacotherapy options for major depressive and anxiety disorders. Inadequate response and treatment-related adverse events are known challenges in antidepressant therapy. Genetic variations in genes encoding the drug metabolizing enzymes, CYP2D6, CYP2C19 and CYP2B6, have been shown to alter antidepressant biotransformation, which may potentially affect dosing, efficacy, and tolerability.</Attribute>
+                <XRef Type="drug" ID="PA451333" DB="ClinPGx"/>
+              </AttributeSet>
+              <Citation Type="general" Abbrev="DPWG, 2011">
+                <ID Source="PubMed">21412232</ID>
+              </Citation>
+              <Citation Type="general" Abbrev="CPIC, 2015">
+                <ID Source="PubMed">25974703</ID>
+                <ID Source="pmc">4512908</ID>
+              </Citation>
+              <Citation Type="practice guideline" Abbrev="DPWG, 2021">
+                <URL>https://www.g-standaard.nl/risicoanalyse/M0002594.pdf</URL>
+                <CitationText>Royal Dutch Pharmacists Association (KNMP). Dutch Pharmacogenetics Working Group (DPWG). Pharmacogenetic Guidelines [Internet]. CYP2C19: sertraline</CitationText>
+              </Citation>
+              <Citation Type="practice guideline" Abbrev="CPIC, 2023">
+                <URL>https://cpicpgx.org/guidelines/cpic-guideline-for-ssri-and-snri-antidepressants/</URL>
+                <CitationText>CPIC® Guideline for Serotonin Reuptake Inhibitor Antidepressants and CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A, 2023</CitationText>
+              </Citation>
+              <XRef ID="CN221265" DB="MedGen"/>
+            </Trait>
+          </TraitSet>
+          <TraitSet ID="21569" Type="DrugResponse" ContributesToAggregateClassification="true">
+            <Trait ID="32267" Type="DrugResponse">
+              <Name>
+                <ElementValue Type="Preferred">Escitalopram response</ElementValue>
+              </Name>
+              <Name>
+                <ElementValue Type="Alternate">Lexapro response</ElementValue>
+              </Name>
+              <AttributeSet>
+                <Attribute Type="public definition">Serotonin reuptake inhibitor antidepressants, such as selective serotonin reuptake inhibitors (SSRIs), serotonin and norepinephrine reuptake inhibitors (SNRIs), and serotonin modulators with SSRI-like properties are pharmacotherapy options for major depressive and anxiety disorders. Inadequate response and treatment-related adverse events are known challenges in antidepressant therapy. Genetic variations in genes encoding the drug metabolizing enzymes, CYP2D6, CYP2C19 and CYP2B6, have been shown to alter antidepressant biotransformation, which may potentially affect dosing, efficacy, and tolerability.</Attribute>
+                <XRef Type="drug" ID="PA10074" DB="ClinPGx"/>
+              </AttributeSet>
+              <Citation Type="general" Abbrev="DPWG, 2011">
+                <ID Source="PubMed">21412232</ID>
+              </Citation>
+              <Citation Type="general" Abbrev="CPIC, 2015">
+                <ID Source="PubMed">25974703</ID>
+                <ID Source="pmc">4512908</ID>
+              </Citation>
+              <Citation Type="practice guideline" Abbrev="CPIC, 2023">
+                <URL>https://cpicpgx.org/guidelines/cpic-guideline-for-ssri-and-snri-antidepressants/</URL>
+                <CitationText>CPIC® Guideline for Serotonin Reuptake Inhibitor Antidepressants and CYP2D6, CYP2C19, CYP2B6, SLC6A4, and HTR2A, 2023</CitationText>
+              </Citation>
+              <XRef ID="CN221264" DB="MedGen"/>
+            </Trait>
+          </TraitSet>
+        </ConditionList>
+      </GermlineClassification>
+    </Classifications>
+    <ClinicalAssertionList>
+      <ClinicalAssertion ID="1802746" SubmissionDate="2018-03-01" ContributesToAggregateClassification="true" DateLastUpdated="2019-06-17" DateCreated="2019-06-17">
+        <ClinVarSubmissionID localKey="980b14986dce8579a63cb8f470c6cc7b|Voriconazole response" submittedAssembly="GRCh38"/>
+        <ClinVarAccession Accession="SCV000923181" DateUpdated="2019-06-17" DateCreated="2019-06-17" Type="SCV" Version="2" SubmitterName="Clinical Pharmacogenetics Implementation Consortium" OrgID="505961" OrganizationCategory="consortium" OrgAbbreviation="CPIC"/>
+        <RecordStatus>current</RecordStatus>
+        <Classification>
+          <ReviewStatus>practice guideline</ReviewStatus>
+          <GermlineClassification>drug response</GermlineClassification>
+          <ExplanationOfClassification>Indeterminate</ExplanationOfClassification>
+          <Citation>
+            <ID Source="PubMed">27981572</ID>
+          </Citation>
+          <Citation>
+            <URL>https://cpicpgx.org/guidelines/guideline-for-voriconazole-and-cyp2c19/</URL>
+          </Citation>
+        </Classification>
+        <Assertion>variation to disease</Assertion>
+        <AttributeSet>
+          <Attribute Type="AssertionMethod">Clinical Pharmacogenetics Implementation Consortium</Attribute>
+          <Citation>
+            <ID Source="PubMed">21270786</ID>
+          </Citation>
+        </AttributeSet>
+        <ObservedInList>
+          <ObservedIn>
+            <Sample>
+              <Origin>germline</Origin>
+              <Species TaxonomyId="9606">human</Species>
+              <AffectedStatus>not applicable</AffectedStatus>
+            </Sample>
+            <Method>
+              <MethodType>curation</MethodType>
+            </Method>
+            <ObservedData>
+              <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+          </ObservedIn>
+        </ObservedInList>
+        <Genotype>
+          <Haplotype NumberOfChromosomes="2">
+            <SimpleAllele>
+              <GeneList>
+                <Gene Symbol="CYP2C19"/>
+              </GeneList>
+              <VariantType>Variation</VariantType>
+              <AttributeSet>
+                <Attribute Type="HGVS">NC_000010.11:g.94775160G&gt;C</Attribute>
+              </AttributeSet>
+            </SimpleAllele>
+          </Haplotype>
+          <Name>CYP2C19*23/*23</Name>
+          <VariationType>Diplotype</VariationType>
+        </Genotype>
+        <TraitSet Type="DrugResponse">
+          <Trait Type="DrugResponse">
+            <Name>
+              <ElementValue Type="Preferred">Voriconazole response</ElementValue>
+            </Name>
+          </Trait>
+        </TraitSet>
+        <Citation>
+          <URL>https://www.pharmgkb.org/guideline/PA166161537</URL>
+        </Citation>
+      </ClinicalAssertion>
+      <ClinicalAssertion ID="1802215" SubmissionDate="2018-03-01" ContributesToAggregateClassification="true" DateLastUpdated="2019-06-17" DateCreated="2019-06-17">
+        <ClinVarSubmissionID localKey="a4ef694c71e91762d5eb220cfb674df0|Citalopram response" submittedAssembly="GRCh38"/>
+        <ClinVarAccession Accession="SCV000922650" DateUpdated="2019-06-17" DateCreated="2019-06-17" Type="SCV" Version="2" SubmitterName="Clinical Pharmacogenetics Implementation Consortium" OrgID="505961" OrganizationCategory="consortium" OrgAbbreviation="CPIC"/>
+        <RecordStatus>current</RecordStatus>
+        <Classification>
+          <ReviewStatus>practice guideline</ReviewStatus>
+          <GermlineClassification>drug response</GermlineClassification>
+          <ExplanationOfClassification>Indeterminate</ExplanationOfClassification>
+          <Citation>
+            <ID Source="PubMed">25974703</ID>
+          </Citation>
+          <Citation>
+            <URL>https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/</URL>
+          </Citation>
+        </Classification>
+        <Assertion>variation to disease</Assertion>
+        <AttributeSet>
+          <Attribute Type="AssertionMethod">Clinical Pharmacogenetics Implementation Consortium</Attribute>
+          <Citation>
+            <ID Source="PubMed">21270786</ID>
+          </Citation>
+        </AttributeSet>
+        <ObservedInList>
+          <ObservedIn>
+            <Sample>
+              <Origin>germline</Origin>
+              <Species TaxonomyId="9606">human</Species>
+              <AffectedStatus>not applicable</AffectedStatus>
+            </Sample>
+            <Method>
+              <MethodType>curation</MethodType>
+            </Method>
+            <ObservedData>
+              <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+          </ObservedIn>
+        </ObservedInList>
+        <Genotype>
+          <Haplotype NumberOfChromosomes="2">
+            <SimpleAllele>
+              <GeneList>
+                <Gene Symbol="CYP2C19"/>
+              </GeneList>
+              <VariantType>Variation</VariantType>
+              <AttributeSet>
+                <Attribute Type="HGVS">NC_000010.11:g.94775160G&gt;C</Attribute>
+              </AttributeSet>
+            </SimpleAllele>
+          </Haplotype>
+          <Name>CYP2C19*23/*23</Name>
+          <VariationType>Diplotype</VariationType>
+        </Genotype>
+        <TraitSet Type="DrugResponse">
+          <Trait Type="DrugResponse">
+            <Name>
+              <ElementValue Type="Preferred">Citalopram response</ElementValue>
+            </Name>
+          </Trait>
+        </TraitSet>
+        <Citation>
+          <URL>https://www.pharmgkb.org/guideline/PA166127638</URL>
+        </Citation>
+      </ClinicalAssertion>
+      <ClinicalAssertion ID="1802216" SubmissionDate="2018-03-01" ContributesToAggregateClassification="true" DateLastUpdated="2019-06-17" DateCreated="2019-06-17">
+        <ClinVarSubmissionID localKey="bf3690f3461e04331fd33b2f885cf43c|Escitalopram response" submittedAssembly="GRCh38"/>
+        <ClinVarAccession Accession="SCV000922651" DateUpdated="2019-06-17" DateCreated="2019-06-17" Type="SCV" Version="2" SubmitterName="Clinical Pharmacogenetics Implementation Consortium" OrgID="505961" OrganizationCategory="consortium" OrgAbbreviation="CPIC"/>
+        <RecordStatus>current</RecordStatus>
+        <Classification>
+          <ReviewStatus>practice guideline</ReviewStatus>
+          <GermlineClassification>drug response</GermlineClassification>
+          <ExplanationOfClassification>Indeterminate</ExplanationOfClassification>
+          <Citation>
+            <ID Source="PubMed">25974703</ID>
+          </Citation>
+          <Citation>
+            <URL>https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/</URL>
+          </Citation>
+        </Classification>
+        <Assertion>variation to disease</Assertion>
+        <AttributeSet>
+          <Attribute Type="AssertionMethod">Clinical Pharmacogenetics Implementation Consortium</Attribute>
+          <Citation>
+            <ID Source="PubMed">21270786</ID>
+          </Citation>
+        </AttributeSet>
+        <ObservedInList>
+          <ObservedIn>
+            <Sample>
+              <Origin>germline</Origin>
+              <Species TaxonomyId="9606">human</Species>
+              <AffectedStatus>not applicable</AffectedStatus>
+            </Sample>
+            <Method>
+              <MethodType>curation</MethodType>
+            </Method>
+            <ObservedData>
+              <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+          </ObservedIn>
+        </ObservedInList>
+        <Genotype>
+          <Haplotype NumberOfChromosomes="2">
+            <SimpleAllele>
+              <GeneList>
+                <Gene Symbol="CYP2C19"/>
+              </GeneList>
+              <VariantType>Variation</VariantType>
+              <AttributeSet>
+                <Attribute Type="HGVS">NC_000010.11:g.94775160G&gt;C</Attribute>
+              </AttributeSet>
+            </SimpleAllele>
+          </Haplotype>
+          <Name>CYP2C19*23/*23</Name>
+          <VariationType>Diplotype</VariationType>
+        </Genotype>
+        <TraitSet Type="DrugResponse">
+          <Trait Type="DrugResponse">
+            <Name>
+              <ElementValue Type="Preferred">Escitalopram response</ElementValue>
+            </Name>
+          </Trait>
+        </TraitSet>
+        <Citation>
+          <URL>https://www.pharmgkb.org/guideline/PA166127638</URL>
+        </Citation>
+      </ClinicalAssertion>
+      <ClinicalAssertion ID="1802595" SubmissionDate="2018-03-01" ContributesToAggregateClassification="true" DateLastUpdated="2019-06-17" DateCreated="2019-06-17">
+        <ClinVarSubmissionID localKey="b8d22dd0235ab0061a818a8c9fefbd7f|Sertraline response" submittedAssembly="GRCh38"/>
+        <ClinVarAccession Accession="SCV000923030" DateUpdated="2019-06-17" DateCreated="2019-06-17" Type="SCV" Version="2" SubmitterName="Clinical Pharmacogenetics Implementation Consortium" OrgID="505961" OrganizationCategory="consortium" OrgAbbreviation="CPIC"/>
+        <RecordStatus>current</RecordStatus>
+        <Classification>
+          <ReviewStatus>practice guideline</ReviewStatus>
+          <GermlineClassification>drug response</GermlineClassification>
+          <ExplanationOfClassification>Indeterminate</ExplanationOfClassification>
+          <Citation>
+            <ID Source="PubMed">25974703</ID>
+          </Citation>
+          <Citation>
+            <URL>https://cpicpgx.org/guidelines/guideline-for-selective-serotonin-reuptake-inhibitors-and-cyp2d6-and-cyp2c19/</URL>
+          </Citation>
+        </Classification>
+        <Assertion>variation to disease</Assertion>
+        <AttributeSet>
+          <Attribute Type="AssertionMethod">Clinical Pharmacogenetics Implementation Consortium</Attribute>
+          <Citation>
+            <ID Source="PubMed">21270786</ID>
+          </Citation>
+        </AttributeSet>
+        <ObservedInList>
+          <ObservedIn>
+            <Sample>
+              <Origin>germline</Origin>
+              <Species TaxonomyId="9606">human</Species>
+              <AffectedStatus>not applicable</AffectedStatus>
+            </Sample>
+            <Method>
+              <MethodType>curation</MethodType>
+            </Method>
+            <ObservedData>
+              <Attribute Type="Description">not provided</Attribute>
+            </ObservedData>
+          </ObservedIn>
+        </ObservedInList>
+        <Genotype>
+          <Haplotype NumberOfChromosomes="2">
+            <SimpleAllele>
+              <GeneList>
+                <Gene Symbol="CYP2C19"/>
+              </GeneList>
+              <VariantType>Variation</VariantType>
+              <AttributeSet>
+                <Attribute Type="HGVS">NC_000010.11:g.94775160G&gt;C</Attribute>
+              </AttributeSet>
+            </SimpleAllele>
+          </Haplotype>
+          <Name>CYP2C19*23/*23</Name>
+          <VariationType>Diplotype</VariationType>
+        </Genotype>
+        <TraitSet Type="DrugResponse">
+          <Trait Type="DrugResponse">
+            <Name>
+              <ElementValue Type="Preferred">Sertraline response</ElementValue>
+            </Name>
+          </Trait>
+        </TraitSet>
+        <Citation>
+          <URL>https://www.pharmgkb.org/guideline/PA166127639</URL>
+        </Citation>
+      </ClinicalAssertion>
+    </ClinicalAssertionList>
+    <TraitMappingList>
+      <TraitMapping ClinicalAssertionID="1802746" TraitType="DrugResponse" MappingType="Name" MappingValue="Voriconazole response" MappingRef="Preferred">
+        <MedGen CUI="CN077957" Name="Voriconazole response"/>
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="1802215" TraitType="DrugResponse" MappingType="Name" MappingValue="Citalopram response" MappingRef="Preferred">
+        <MedGen CUI="CN221263" Name="Citalopram response"/>
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="1802216" TraitType="DrugResponse" MappingType="Name" MappingValue="Escitalopram response" MappingRef="Preferred">
+        <MedGen CUI="CN221264" Name="Escitalopram response"/>
+      </TraitMapping>
+      <TraitMapping ClinicalAssertionID="1802595" TraitType="DrugResponse" MappingType="Name" MappingValue="Sertraline response" MappingRef="Preferred">
+        <MedGen CUI="CN221265" Name="Sertraline response"/>
+      </TraitMapping>
+    </TraitMappingList>
+  </ClassifiedRecord>
+</VariationArchive>
+</ClinVarResult-Set>

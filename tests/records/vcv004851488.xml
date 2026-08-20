@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+                        
+<ClinVarResult-Set><VariationArchive VariationID="4851488" VariationName="NM_015909.4(NBAS):c.[539_540delinsTG;619C&gt;T]" VariationType="Haplotype" Accession="VCV004851488" Version="1" RecordType="classified" NumberOfSubmissions="1" NumberOfSubmitters="1" DateLastUpdated="2026-05-30" DateCreated="2026-05-30" MostRecentSubmission="2026-05-30">
+  <RecordStatus>current</RecordStatus>
+  <Species>Homo sapiens</Species>
+  <ClassifiedRecord>
+    <Haplotype VariationID="4851488" NumberOfChromosomes="1">
+      <SimpleAllele AlleleID="2110050" VariationID="2059937">
+        <GeneList>
+          <Gene Symbol="NBAS" FullName="NBAS subunit of NRZ tethering complex" GeneID="51594" HGNC_ID="HGNC:15625" Source="submitted" RelationshipType="within single gene">
+            <Location>
+              <CytogeneticLocation>2p24.3</CytogeneticLocation>
+              <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="2" Accession="NC_000002.12" start="14778909" stop="15561334" display_start="14778909" display_stop="15561334" Strand="-"/>
+              <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="2" Accession="NC_000002.11" start="15307031" stop="15701471" display_start="15307031" display_stop="15701471" Strand="-"/>
+            </Location>
+            <OMIM>608025</OMIM>
+            <Haploinsufficiency last_evaluated="2016-08-22" ClinGen="https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=NBAS">Gene associated with autosomal recessive phenotype</Haploinsufficiency>
+            <Triplosensitivity last_evaluated="2016-08-22" ClinGen="https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=NBAS">Not yet evaluated</Triplosensitivity>
+          </Gene>
+        </GeneList>
+        <Name>NM_015909.4(NBAS):c.619C&gt;T (p.Arg207Ter)</Name>
+        <CanonicalSPDI>NC_000002.12:15536445:G:A</CanonicalSPDI>
+        <VariantType>single nucleotide variant</VariantType>
+        <Location>
+          <CytogeneticLocation>2p24.3</CytogeneticLocation>
+          <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" forDisplay="true" AssemblyStatus="current" Chr="2" Accession="NC_000002.12" start="15536446" stop="15536446" display_start="15536446" display_stop="15536446" variantLength="1" positionVCF="15536446" referenceAlleleVCF="G" alternateAlleleVCF="A"/>
+          <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="2" Accession="NC_000002.11" start="15676570" stop="15676570" display_start="15676570" display_stop="15676570" variantLength="1" positionVCF="15676570" referenceAlleleVCF="G" alternateAlleleVCF="A"/>
+        </Location>
+        <ProteinChange>R207*</ProteinChange>
+        <HGVSlist>
+          <HGVS Assembly="GRCh37" Type="genomic, top-level">
+            <NucleotideExpression sequenceAccessionVersion="NC_000002.11" sequenceAccession="NC_000002" sequenceVersion="11" change="g.15676570G&gt;A" Assembly="GRCh37">
+              <Expression>NC_000002.11:g.15676570G&gt;A</Expression>
+            </NucleotideExpression>
+          </HGVS>
+          <HGVS Assembly="GRCh38" Type="genomic, top-level">
+            <NucleotideExpression sequenceAccessionVersion="NC_000002.12" sequenceAccession="NC_000002" sequenceVersion="12" change="g.15536446G&gt;A" Assembly="GRCh38">
+              <Expression>NC_000002.12:g.15536446G&gt;A</Expression>
+            </NucleotideExpression>
+          </HGVS>
+          <HGVS Type="genomic">
+            <NucleotideExpression sequenceAccessionVersion="NG_032964.1" sequenceAccession="NG_032964" sequenceVersion="1" change="g.29903C&gt;T">
+              <Expression>NG_032964.1:g.29903C&gt;T</Expression>
+            </NucleotideExpression>
+          </HGVS>
+          <HGVS Type="genomic">
+            <NucleotideExpression sequenceAccessionVersion="NG_032964.2" sequenceAccession="NG_032964" sequenceVersion="2" change="g.29888C&gt;T">
+              <Expression>NG_032964.2:g.29888C&gt;T</Expression>
+            </NucleotideExpression>
+          </HGVS>
+          <HGVS Type="coding">
+            <NucleotideExpression sequenceAccessionVersion="NM_015909.4" sequenceAccession="NM_015909" sequenceVersion="4" change="c.619C&gt;T" MANESelect="true">
+              <Expression>NM_015909.4:c.619C&gt;T</Expression>
+            </NucleotideExpression>
+            <ProteinExpression sequenceAccessionVersion="NP_056993.2" sequenceAccession="NP_056993" sequenceVersion="2" change="p.Arg207Ter" singleLetterProteinChange="R207*">
+              <Expression>NP_056993.2:p.Arg207Ter</Expression>
+            </ProteinExpression>
+            <MolecularConsequence ID="SO:0001587" Type="nonsense" DB="SO"/>
+          </HGVS>
+          <HGVS Type="non-coding">
+            <NucleotideExpression sequenceAccessionVersion="NR_052013.3" sequenceAccession="NR_052013" sequenceVersion="3" change="n.649C&gt;T">
+              <Expression>NR_052013.3:n.649C&gt;T</Expression>
+            </NucleotideExpression>
+            <MolecularConsequence ID="SO:0001619" Type="non-coding transcript variant" DB="SO"/>
+          </HGVS>
+        </HGVSlist>
+        <Classifications>
+          <GermlineClassification DateLastEvaluated="2025-12-30" DateCreated="2023-01-25" MostRecentSubmission="2026-02-21" NumberOfSubmissions="1" NumberOfSubmitters="1">
+            <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+            <Description>Pathogenic</Description>
+            <Citation Type="general">
+              <ID Source="PubMed">26073778</ID>
+            </Citation>
+            <Citation Type="general">
+              <ID Source="PubMed">26541327</ID>
+            </Citation>
+            <Citation Type="general">
+              <ID Source="PubMed">27789416</ID>
+            </Citation>
+            <Citation Type="general">
+              <ID Source="PubMed">28031453</ID>
+            </Citation>
+            <ConditionList>
+              <TraitSet ID="9460" Type="Disease" ContributesToAggregateClassification="true">
+                <Trait ID="17556" Type="Disease">
+                  <Name>
+                    <ElementValue Type="Alternate">none provided</ElementValue>
+                  </Name>
+                  <Name>
+                    <ElementValue Type="Preferred">not provided</ElementValue>
+                    <XRef ID="13DG0619" DB="Genomic Medicine Center of Excellence, King Faisal Specialist Hospital and Research Centre"/>
+                  </Name>
+                  <AttributeSet>
+                    <Attribute Type="public definition">The term 'not provided' is registered in MedGen to support identification of submissions to ClinVar for which no condition was named when assessing the variant. 'not provided' differs from 'not specified', which is used when a variant is asserted to be benign, likely benign, or of uncertain significance for conditions that have not been specified.</Attribute>
+                  </AttributeSet>
+                  <XRef ID="C3661900" DB="MedGen"/>
+                </Trait>
+              </TraitSet>
+            </ConditionList>
+          </GermlineClassification>
+        </Classifications>
+        <XRefList>
+          <XRef Type="Interpreted" ID="4851488" DB="ClinVar"/>
+          <XRef ID="CA42648650" DB="ClinGen"/>
+          <XRef Type="rs" ID="866020952" DB="dbSNP"/>
+        </XRefList>
+      </SimpleAllele>
+      <SimpleAllele AlleleID="4962437" VariationID="4851506">
+        <GeneList>
+          <Gene Symbol="NBAS" FullName="NBAS subunit of NRZ tethering complex" GeneID="51594" HGNC_ID="HGNC:15625" Source="submitted" RelationshipType="within single gene">
+            <Location>
+              <CytogeneticLocation>2p24.3</CytogeneticLocation>
+              <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="2" Accession="NC_000002.12" start="14778909" stop="15561334" display_start="14778909" display_stop="15561334" Strand="-"/>
+              <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="2" Accession="NC_000002.11" start="15307031" stop="15701471" display_start="15307031" display_stop="15701471" Strand="-"/>
+            </Location>
+            <OMIM>608025</OMIM>
+            <Haploinsufficiency last_evaluated="2016-08-22" ClinGen="https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=NBAS">Gene associated with autosomal recessive phenotype</Haploinsufficiency>
+            <Triplosensitivity last_evaluated="2016-08-22" ClinGen="https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=NBAS">Not yet evaluated</Triplosensitivity>
+          </Gene>
+        </GeneList>
+        <Name>NM_015909.4(NBAS):c.539_540delinsTG (p.Ser180Met)</Name>
+        <CanonicalSPDI>NC_000002.12:15536524:GC:CA</CanonicalSPDI>
+        <VariantType>Indel</VariantType>
+        <Location>
+          <CytogeneticLocation>2p24.3</CytogeneticLocation>
+          <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" forDisplay="true" AssemblyStatus="current" Chr="2" Accession="NC_000002.12" start="15536525" stop="15536526" display_start="15536525" display_stop="15536526" variantLength="2" positionVCF="15536525" referenceAlleleVCF="GC" alternateAlleleVCF="CA"/>
+          <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="2" Accession="NC_000002.11" start="15676649" stop="15676650" display_start="15676649" display_stop="15676650" variantLength="2" positionVCF="15676649" referenceAlleleVCF="GC" alternateAlleleVCF="CA"/>
+        </Location>
+        <ProteinChange>S180M</ProteinChange>
+        <HGVSlist>
+          <HGVS Assembly="GRCh37" Type="genomic, top-level">
+            <NucleotideExpression sequenceAccessionVersion="NC_000002.11" sequenceAccession="NC_000002" sequenceVersion="11" change="g.15676649_15676650delinsCA" Assembly="GRCh37">
+              <Expression>NC_000002.11:g.15676649_15676650delinsCA</Expression>
+            </NucleotideExpression>
+          </HGVS>
+          <HGVS Assembly="GRCh38" Type="genomic, top-level">
+            <NucleotideExpression sequenceAccessionVersion="NC_000002.12" sequenceAccession="NC_000002" sequenceVersion="12" change="g.15536525_15536526delinsCA" Assembly="GRCh38">
+              <Expression>NC_000002.12:g.15536525_15536526delinsCA</Expression>
+            </NucleotideExpression>
+          </HGVS>
+          <HGVS Type="genomic">
+            <NucleotideExpression sequenceAccessionVersion="NG_032964.1" sequenceAccession="NG_032964" sequenceVersion="1" change="g.29823_29824delinsTG">
+              <Expression>NG_032964.1:g.29823_29824delinsTG</Expression>
+            </NucleotideExpression>
+          </HGVS>
+          <HGVS Type="genomic">
+            <NucleotideExpression sequenceAccessionVersion="NG_032964.2" sequenceAccession="NG_032964" sequenceVersion="2" change="g.29808_29809delinsTG">
+              <Expression>NG_032964.2:g.29808_29809delinsTG</Expression>
+            </NucleotideExpression>
+          </HGVS>
+          <HGVS Type="coding">
+            <NucleotideExpression sequenceAccessionVersion="NM_015909.4" sequenceAccession="NM_015909" sequenceVersion="4" change="c.539_540delinsTG" MANESelect="true">
+              <Expression>NM_015909.4:c.539_540delinsTG</Expression>
+            </NucleotideExpression>
+            <ProteinExpression sequenceAccessionVersion="NP_056993.2" sequenceAccession="NP_056993" sequenceVersion="2" change="p.Ser180Met" singleLetterProteinChange="S180M">
+              <Expression>NP_056993.2:p.Ser180Met</Expression>
+            </ProteinExpression>
+            <MolecularConsequence ID="SO:0001583" Type="missense variant" DB="SO"/>
+          </HGVS>
+          <HGVS Type="non-coding">
+            <NucleotideExpression sequenceAccessionVersion="NR_052013.3" sequenceAccession="NR_052013" sequenceVersion="3" change="n.569_570delinsTG">
+              <Expression>NR_052013.3:n.569_570delinsTG</Expression>
+            </NucleotideExpression>
+            <MolecularConsequence ID="SO:0001619" Type="non-coding transcript variant" DB="SO"/>
+          </HGVS>
+        </HGVSlist>
+        <Classifications>
+          <GermlineClassification NumberOfSubmissions="0" NumberOfSubmitters="0">
+            <ReviewStatus>no classification for the single variant</ReviewStatus>
+            <Description>no classification for the single variant</Description>
+          </GermlineClassification>
+          <SomaticClinicalImpact NumberOfSubmissions="0" NumberOfSubmitters="0">
+            <ReviewStatus>no classification for the single variant</ReviewStatus>
+            <Description>no classification for the single variant</Description>
+          </SomaticClinicalImpact>
+          <OncogenicityClassification NumberOfSubmissions="0" NumberOfSubmitters="0">
+            <ReviewStatus>no classification for the single variant</ReviewStatus>
+            <Description>no classification for the single variant</Description>
+          </OncogenicityClassification>
+        </Classifications>
+        <XRefList>
+          <XRef Type="Interpreted" ID="4851488" DB="ClinVar"/>
+        </XRefList>
+      </SimpleAllele>
+      <Name>NM_015909.4(NBAS):c.[539_540delinsTG;619C&gt;T]</Name>
+      <VariationType>Haplotype</VariationType>
+      <HGVSlist>
+        <HGVS Type="coding">
+          <NucleotideExpression MANESelect="true">
+            <Expression>NM_015909.4:c.[539_540delinsTG;619C&gt;T]</Expression>
+          </NucleotideExpression>
+        </HGVS>
+      </HGVSlist>
+    </Haplotype>
+    <RCVList>
+      <RCVAccession Title="NM_015909.4(NBAS):c.[539_540delinsTG;619C&gt;T] AND Short stature-optic atrophy-Pelger-Huët anomaly syndrome" Accession="RCV006697839" Version="1">
+        <ClassifiedConditionList TraitSetID="8844">
+          <ClassifiedCondition DB="MedGen" ID="C3541319">Short stature-optic atrophy-Pelger-Huët anomaly syndrome</ClassifiedCondition>
+        </ClassifiedConditionList>
+        <RCVClassifications>
+          <GermlineClassification>
+            <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+            <Description DateLastEvaluated="2026-03-23" SubmissionCount="1">Pathogenic</Description>
+          </GermlineClassification>
+        </RCVClassifications>
+      </RCVAccession>
+    </RCVList>
+    <Classifications>
+      <GermlineClassification DateLastEvaluated="2026-03-23" NumberOfSubmissions="1" NumberOfSubmitters="1" DateCreated="2026-05-30" MostRecentSubmission="2026-05-30">
+        <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+        <Description>Pathogenic</Description>
+        <Explanation DataSource="ClinVar" Type="public">Pathogenic (1)</Explanation>
+        <ConditionList>
+          <TraitSet ID="8844" Type="Disease" ContributesToAggregateClassification="true">
+            <Trait ID="17354" Type="Disease">
+              <Name>
+                <ElementValue Type="Preferred">Short stature-optic atrophy-Pelger-Huët anomaly syndrome</ElementValue>
+                <XRef ID="MONDO:0013889" DB="MONDO"/>
+              </Name>
+              <Name>
+                <ElementValue Type="Alternate">Short stature, optic nerve atrophy, and Pelger-Huet anomaly</ElementValue>
+              </Name>
+              <Name>
+                <ElementValue Type="Alternate">Short stature-optic atrophy-Pelger-HuC+t anomaly syndrome</ElementValue>
+              </Name>
+              <Symbol>
+                <ElementValue Type="Alternate">SOPH</ElementValue>
+                <XRef Type="MIM" ID="614800" DB="OMIM"/>
+              </Symbol>
+              <AttributeSet>
+                <Attribute Type="GARD id" integerValue="10945"/>
+                <XRef ID="10945" DB="Office of Rare Diseases"/>
+              </AttributeSet>
+              <XRef ID="391677" DB="Orphanet"/>
+              <XRef ID="C3541319" DB="MedGen"/>
+              <XRef ID="MONDO:0013889" DB="MONDO"/>
+              <XRef Type="MIM" ID="614800" DB="OMIM"/>
+            </Trait>
+          </TraitSet>
+        </ConditionList>
+      </GermlineClassification>
+    </Classifications>
+    <ClinicalAssertionList>
+      <ClinicalAssertion ID="14506790" SubmissionDate="2026-05-21" ContributesToAggregateClassification="true" DateLastUpdated="2026-05-30" DateCreated="2026-05-30">
+        <ClinVarSubmissionID localKey="20260520_10" localKeyIsSubmitted="1" submittedAssembly="GRCh38"/>
+        <ClinVarAccession Accession="SCV007596796" DateUpdated="2026-05-30" DateCreated="2026-05-30" Type="SCV" Version="1" SubmitterName="Synevo Romania" OrgID="510578" OrganizationCategory="laboratory"/>
+        <RecordStatus>current</RecordStatus>
+        <Classification DateLastEvaluated="2026-03-23">
+          <ReviewStatus>criteria provided, single submitter</ReviewStatus>
+          <GermlineClassification>Pathogenic</GermlineClassification>
+          <Comment Type="public">This complex allele of p.[Ser180Ile;Arg207*] has a predicted consequence of generating a premature stop codon in exon 8/52 of the NBAS gene. Loss of function alleles are documented pathogenic for this gene (OMIM). This complex allele has not been observed in the general population (AC=0 in gnomAD for c.539_540delinsTG). It has not been reported in affected individuals in the published literature. Has been observed in a suspected case of SOPH in trans with another variation of NBAS (internal data). The in cis allelic position of the variants has been confirmed through segregational analysis (internal). Criteria applied: PVS1, PM2_Supporting, PM3</Comment>
+        </Classification>
+        <Assertion>variation to disease</Assertion>
+        <AttributeSet>
+          <Attribute Type="ModeOfInheritance">Autosomal recessive inheritance</Attribute>
+        </AttributeSet>
+        <AttributeSet>
+          <Attribute Type="AssertionMethod">ACMG Guidelines, 2015</Attribute>
+          <Citation>
+            <ID Source="PubMed">25741868</ID>
+          </Citation>
+        </AttributeSet>
+        <ObservedInList>
+          <ObservedIn>
+            <Sample>
+              <Origin>inherited</Origin>
+              <Species TaxonomyId="9606">human</Species>
+              <AffectedStatus>unknown</AffectedStatus>
+              <NumberTested>1</NumberTested>
+              <Proband>yes</Proband>
+            </Sample>
+            <Method>
+              <MethodType>clinical testing</MethodType>
+            </Method>
+            <ObservedData>
+              <Attribute Type="NumberMosaic" integerValue="0"/>
+            </ObservedData>
+            <ObservedData>
+              <Attribute Type="VariantAlleles" integerValue="1"/>
+            </ObservedData>
+            <ObservedData>
+              <Attribute Type="CompoundHeterozygote" integerValue="1"/>
+            </ObservedData>
+            <ObservedData>
+              <Attribute Type="SecondaryFinding">no</Attribute>
+            </ObservedData>
+          </ObservedIn>
+        </ObservedInList>
+        <Haplotype>
+          <SimpleAllele>
+            <GeneList>
+              <Gene Symbol="NBAS"/>
+            </GeneList>
+            <VariantType>Variation</VariantType>
+            <AttributeSet>
+              <Attribute Type="HGVS">NM_015909.4:c.539_540delinsTG</Attribute>
+            </AttributeSet>
+          </SimpleAllele>
+          <SimpleAllele>
+            <GeneList>
+              <Gene Symbol="NBAS"/>
+            </GeneList>
+            <VariantType>Variation</VariantType>
+            <AttributeSet>
+              <Attribute Type="HGVS">NM_015909.4:c.619C&gt;T</Attribute>
+            </AttributeSet>
+          </SimpleAllele>
+        </Haplotype>
+        <TraitSet Type="Disease">
+          <Trait Type="Disease">
+            <XRef DB="OMIM" ID="614800" Type="MIM"/>
+          </Trait>
+        </TraitSet>
+        <SubmissionNameList>
+          <SubmissionName>SUB16200327</SubmissionName>
+        </SubmissionNameList>
+      </ClinicalAssertion>
+    </ClinicalAssertionList>
+    <TraitMappingList>
+      <TraitMapping ClinicalAssertionID="14506790" TraitType="Disease" MappingType="XRef" MappingValue="614800" MappingRef="OMIM">
+        <MedGen CUI="C3541319" Name="Short stature-optic atrophy-Pelger-Huët anomaly syndrome"/>
+      </TraitMapping>
+    </TraitMappingList>
+  </ClassifiedRecord>
+</VariationArchive>
+</ClinVarResult-Set>

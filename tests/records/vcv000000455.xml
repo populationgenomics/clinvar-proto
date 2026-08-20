@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+                        
+<ClinVarResult-Set><VariationArchive RecordType="classified" VariationID="455" VariationName="NM_000097.7(CPOX):c.489_509del (p.Cys164_Val170del)" VariationType="Deletion" Accession="VCV000000455" Version="2" NumberOfSubmissions="1" NumberOfSubmitters="1" DateLastUpdated="2022-04-25" DateCreated="2020-05-31" MostRecentSubmission="2020-05-31">
+  <RecordStatus>current</RecordStatus>
+  <Species>Homo sapiens</Species>
+  <ClassifiedRecord>
+    <SimpleAllele AlleleID="15494" VariationID="455">
+      <GeneList>
+        <Gene Symbol="CPOX" FullName="coproporphyrinogen oxidase" GeneID="1371" HGNC_ID="HGNC:2321" Source="submitted" RelationshipType="within single gene">
+          <Location>
+            <CytogeneticLocation>3q11.2</CytogeneticLocation>
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="3" Accession="NC_000003.12" start="98570488" stop="98593611" display_start="98570488" display_stop="98593611" Strand="-"/>
+            <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="3" Accession="NC_000003.11" start="98298289" stop="98312454" display_start="98298289" display_stop="98312454" Strand="-"/>
+          </Location>
+          <OMIM>612732</OMIM>
+        </Gene>
+      </GeneList>
+      <Name>NM_000097.7(CPOX):c.489_509del (p.Cys164_Val170del)</Name>
+      <CanonicalSPDI>NC_000003.12:98592995:ACCTGTGCCAGAGCCTGGCACACCTG:ACCTG</CanonicalSPDI>
+      <VariantType>Deletion</VariantType>
+      <Location>
+        <CytogeneticLocation>3q11.2</CytogeneticLocation>
+        <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" forDisplay="true" AssemblyStatus="current" Chr="3" Accession="NC_000003.12" start="98592996" stop="98593016" display_start="98592996" display_stop="98593016" variantLength="21" positionVCF="98592995" referenceAlleleVCF="TACCTGTGCCAGAGCCTGGCAC" alternateAlleleVCF="T"/>
+        <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="3" Accession="NC_000003.11" start="98311840" stop="98311860" display_start="98311840" display_stop="98311860" variantLength="21" positionVCF="98311839" referenceAlleleVCF="TACCTGTGCCAGAGCCTGGCAC" alternateAlleleVCF="T"/>
+      </Location>
+      <HGVSlist>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="LRG_1077t1" sequenceAccession="LRG_1077t1" change="c.489_509del">
+            <Expression>LRG_1077t1:c.489_509del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="LRG_1077p1" sequenceAccession="LRG_1077p1" change="p.Cys164_Val170del">
+            <Expression>LRG_1077p1:p.Cys164_Val170del</Expression>
+          </ProteinExpression>
+        </HGVS>
+        <HGVS Type="genomic">
+          <NucleotideExpression sequenceAccessionVersion="LRG_1077" sequenceAccession="LRG_1077" change="g.5596_5616del">
+            <Expression>LRG_1077:g.5596_5616del</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Assembly="GRCh37" Type="genomic, top-level">
+          <NucleotideExpression sequenceAccessionVersion="NC_000003.11" sequenceAccession="NC_000003" sequenceVersion="11" change="g.98311845_98311865del" Assembly="GRCh37">
+            <Expression>NC_000003.11:g.98311845_98311865del</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Assembly="GRCh38" Type="genomic, top-level">
+          <NucleotideExpression sequenceAccessionVersion="NC_000003.12" sequenceAccession="NC_000003" sequenceVersion="12" change="g.98593001_98593021del" Assembly="GRCh38">
+            <Expression>NC_000003.12:g.98593001_98593021del</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Type="genomic">
+          <NucleotideExpression sequenceAccessionVersion="NG_015994.2" sequenceAccession="NG_015994" sequenceVersion="2" change="g.5596_5616del">
+            <Expression>NG_015994.2:g.5596_5616del</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_000097.7" sequenceAccession="NM_000097" sequenceVersion="7" change="c.489_509del" MANESelect="true">
+            <Expression>NM_000097.7:c.489_509del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_000088.3" sequenceAccession="NP_000088" sequenceVersion="3" change="p.Cys164_Val170del">
+            <Expression>NP_000088.3:p.Cys164_Val170del</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001822" Type="inframe_deletion" DB="SO"/>
+        </HGVS>
+      </HGVSlist>
+      <XRefList>
+        <XRef ID="CA212740" DB="ClinGen"/>
+        <XRef Type="Allelic variant" ID="612732.0005" DB="OMIM"/>
+        <XRef Type="rs" ID="786205054" DB="dbSNP"/>
+      </XRefList>
+      <Comment DataSource="NCBI curation" Type="public">NCBI staff reviewed the sequence information reported in PubMed 8990017 to determine the location of this allele on the current reference sequence.</Comment>
+    </SimpleAllele>
+    <RCVList>
+      <RCVAccession Title="NM_000097.7(CPOX):c.489_509del (p.Cys164_Val170del) AND Coproporphyria" Accession="RCV000000484" Version="5">
+        <ClassifiedConditionList TraitSetID="128">
+          <ClassifiedCondition DB="MedGen" ID="C0342856">Coproporphyria</ClassifiedCondition>
+        </ClassifiedConditionList>
+        <RCVClassifications>
+          <GermlineClassification>
+            <ReviewStatus>no assertion criteria provided</ReviewStatus>
+            <Description DateLastEvaluated="1997-01-01" SubmissionCount="1">Pathogenic</Description>
+          </GermlineClassification>
+        </RCVClassifications>
+      </RCVAccession>
+    </RCVList>
+    <Classifications>
+      <GermlineClassification DateLastEvaluated="1997-01-01" NumberOfSubmissions="1" NumberOfSubmitters="1" DateCreated="2020-05-31" MostRecentSubmission="2020-05-31">
+        <ReviewStatus>no assertion criteria provided</ReviewStatus>
+        <Description>Pathogenic</Description>
+        <Explanation DataSource="ClinVar" Type="public">Pathogenic (1)</Explanation>
+        <Citation Type="general">
+          <ID Source="PubMed">8990017</ID>
+        </Citation>
+        <ConditionList>
+          <TraitSet ID="128" Type="Disease" ContributesToAggregateClassification="true">
+            <Trait ID="9639" Type="Disease">
+              <Name>
+                <ElementValue Type="Preferred">Coproporphyria</ElementValue>
+                <XRef ID="190915002" DB="SNOMED CT"/>
+              </Name>
+              <XRef ID="C0342856" DB="MedGen"/>
+            </Trait>
+          </TraitSet>
+        </ConditionList>
+      </GermlineClassification>
+    </Classifications>
+    <ClinicalAssertionList>
+      <ClinicalAssertion ID="20633" SubmissionDate="2020-05-22" DateLastUpdated="2020-05-31" DateCreated="2013-04-04" ContributesToAggregateClassification="true">
+        <ClinVarSubmissionID localKey="612732.0005_COPROPORPHYRIA" title="CPOX, 21-BP DEL_COPROPORPHYRIA"/>
+        <ClinVarAccession Accession="SCV000020633" DateUpdated="2020-05-31" DateCreated="2013-04-04" Type="SCV" Version="4" SubmitterName="OMIM" OrgID="3" OrganizationCategory="resource"/>
+        <RecordStatus>current</RecordStatus>
+        <Classification DateLastEvaluated="1997-01-01">
+          <ReviewStatus>no assertion criteria provided</ReviewStatus>
+          <GermlineClassification>Pathogenic</GermlineClassification>
+        </Classification>
+        <Assertion>variation to disease</Assertion>
+        <ObservedInList>
+          <ObservedIn>
+            <Sample>
+              <Origin>germline</Origin>
+              <Species>human</Species>
+              <AffectedStatus>not provided</AffectedStatus>
+            </Sample>
+            <Method>
+              <MethodType>literature only</MethodType>
+            </Method>
+            <ObservedData>
+              <Attribute Type="Description">Lamoril et al. (1997) demonstrated a novel heterozygous mutation in the CPO gene in each of 3 unrelated patients with hereditary coproporphyria (HCP; 121300). The diagnosis was based on the observation of typical clinical manifestations, increased excretions of delta-aminolevulinic acid and porphobilinogen in urine and coproporphyrin III in both feces and urine, and 50% decreased COX activity in lymphocytes. One patient was found to have a 21-bp in-frame deletion after nucleotide 483 in exon 1 (484del21).</Attribute>
+              <Citation>
+                <ID Source="PubMed">8990017</ID>
+              </Citation>
+              <XRef DB="OMIM" ID="121300" Type="MIM"/>
+            </ObservedData>
+          </ObservedIn>
+        </ObservedInList>
+        <SimpleAllele>
+          <GeneList>
+            <Gene Symbol="CPOX"/>
+          </GeneList>
+          <Name>CPOX, 21-BP DEL</Name>
+          <VariantType>Variation</VariantType>
+          <OtherNameList>
+            <Name Type="NonHGVS">21-BP DEL</Name>
+          </OtherNameList>
+          <XRefList>
+            <XRef DB="OMIM" ID="612732.0005" Type="Allelic variant"/>
+          </XRefList>
+        </SimpleAllele>
+        <TraitSet Type="Disease">
+          <Trait Type="Disease">
+            <Name>
+              <ElementValue Type="Preferred">COPROPORPHYRIA</ElementValue>
+            </Name>
+          </Trait>
+        </TraitSet>
+      </ClinicalAssertion>
+    </ClinicalAssertionList>
+    <TraitMappingList>
+      <TraitMapping ClinicalAssertionID="20633" TraitType="Disease" MappingType="Name" MappingValue="COPROPORPHYRIA" MappingRef="Preferred">
+        <MedGen CUI="C0342856" Name="Coproporphyria"/>
+      </TraitMapping>
+    </TraitMappingList>
+  </ClassifiedRecord>
+</VariationArchive>
+</ClinVarResult-Set>

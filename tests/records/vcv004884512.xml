@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+                        
+<ClinVarResult-Set><VariationArchive VariationID="4884512" VariationName="NM_001110792.2(MECP2):c.1301_1311del (p.Gly434fs)" VariationType="Deletion" Accession="VCV004884512" Version="1" RecordType="included" NumberOfSubmissions="0" NumberOfSubmitters="0" DateLastUpdated="2026-08-16" DateCreated="2026-08-16">
+  <RecordStatus>current</RecordStatus>
+  <Species>Homo sapiens</Species>
+  <IncludedRecord>
+    <SimpleAllele AlleleID="4995273" VariationID="4884512">
+      <GeneList>
+        <Gene Symbol="MECP2" FullName="methyl-CpG binding protein 2" GeneID="4204" HGNC_ID="HGNC:6990" Source="submitted" RelationshipType="within single gene">
+          <Location>
+            <CytogeneticLocation>Xq28</CytogeneticLocation>
+            <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" AssemblyStatus="current" Chr="X" Accession="NC_000023.11" start="154021573" stop="154097717" display_start="154021573" display_stop="154097717" Strand="-"/>
+            <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="X" Accession="NC_000023.10" start="153287263" stop="153363187" display_start="153287263" display_stop="153363187" Strand="-"/>
+          </Location>
+          <OMIM>300005</OMIM>
+          <Haploinsufficiency last_evaluated="2021-02-22" ClinGen="https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=MECP2">Sufficient evidence for dosage pathogenicity</Haploinsufficiency>
+          <Triplosensitivity last_evaluated="2021-02-22" ClinGen="https://www.ncbi.nlm.nih.gov/projects/dbvar/ISCA/isca_gene.cgi?sym=MECP2">No evidence available</Triplosensitivity>
+        </Gene>
+      </GeneList>
+      <Name>NM_001110792.2(MECP2):c.1301_1311del (p.Gly434fs)</Name>
+      <CanonicalSPDI>NC_000023.11:154030552:CTCCAGTGAGCCTCC:CTCC</CanonicalSPDI>
+      <VariantType>Deletion</VariantType>
+      <Location>
+        <CytogeneticLocation>Xq28</CytogeneticLocation>
+        <SequenceLocation Assembly="GRCh38" AssemblyAccessionVersion="GCF_000001405.38" forDisplay="true" AssemblyStatus="current" Chr="X" Accession="NC_000023.11" start="154030553" stop="154030563" display_start="154030553" display_stop="154030563" variantLength="11" positionVCF="154030552" referenceAlleleVCF="TCTCCAGTGAGC" alternateAlleleVCF="T"/>
+        <SequenceLocation Assembly="GRCh37" AssemblyAccessionVersion="GCF_000001405.25" AssemblyStatus="previous" Chr="X" Accession="NC_000023.10" start="153296004" stop="153296014" display_start="153296004" display_stop="153296014" variantLength="11" positionVCF="153296003" referenceAlleleVCF="TCTCCAGTGAGC" alternateAlleleVCF="T"/>
+      </Location>
+      <ProteinChange>G199fs</ProteinChange>
+      <ProteinChange>G329fs</ProteinChange>
+      <ProteinChange>G422fs</ProteinChange>
+      <ProteinChange>G434fs</ProteinChange>
+      <HGVSlist>
+        <HGVS Assembly="GRCh37" Type="genomic, top-level">
+          <NucleotideExpression sequenceAccessionVersion="NC_000023.10" sequenceAccession="NC_000023" sequenceVersion="10" change="g.153296008_153296018del" Assembly="GRCh37">
+            <Expression>NC_000023.10:g.153296008_153296018del</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Assembly="GRCh38" Type="genomic, top-level">
+          <NucleotideExpression sequenceAccessionVersion="NC_000023.11" sequenceAccession="NC_000023" sequenceVersion="11" change="g.154030557_154030567del" Assembly="GRCh38">
+            <Expression>NC_000023.11:g.154030557_154030567del</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Type="genomic">
+          <NucleotideExpression sequenceAccessionVersion="NG_007107.3" sequenceAccession="NG_007107" sequenceVersion="3" change="g.111541_111551del">
+            <Expression>NG_007107.3:g.111541_111551del</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001110792.2" sequenceAccession="NM_001110792" sequenceVersion="2" change="c.1301_1311del" MANESelect="true">
+            <Expression>NM_001110792.2:c.1301_1311del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_001104262.1" sequenceAccession="NP_001104262" sequenceVersion="1" change="p.Gly434fs" singleLetterProteinChange="G434fs">
+            <Expression>NP_001104262.1:p.Gly434fs</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001589" Type="frameshift variant" DB="SO"/>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001316337.2" sequenceAccession="NM_001316337" sequenceVersion="2" change="c.986_996del">
+            <Expression>NM_001316337.2:c.986_996del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_001303266.1" sequenceAccession="NP_001303266" sequenceVersion="1" change="p.Gly329fs" singleLetterProteinChange="G329fs">
+            <Expression>NP_001303266.1:p.Gly329fs</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001589" Type="frameshift variant" DB="SO"/>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001369391.2" sequenceAccession="NM_001369391" sequenceVersion="2" change="c.986_996del">
+            <Expression>NM_001369391.2:c.986_996del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_001356320.1" sequenceAccession="NP_001356320" sequenceVersion="1" change="p.Gly329fs" singleLetterProteinChange="G329fs">
+            <Expression>NP_001356320.1:p.Gly329fs</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001589" Type="frameshift variant" DB="SO"/>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001369392.2" sequenceAccession="NM_001369392" sequenceVersion="2" change="c.986_996del">
+            <Expression>NM_001369392.2:c.986_996del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_001356321.1" sequenceAccession="NP_001356321" sequenceVersion="1" change="p.Gly329fs" singleLetterProteinChange="G329fs">
+            <Expression>NP_001356321.1:p.Gly329fs</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001589" Type="frameshift variant" DB="SO"/>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001369393.2" sequenceAccession="NM_001369393" sequenceVersion="2" change="c.986_996del">
+            <Expression>NM_001369393.2:c.986_996del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_001356322.1" sequenceAccession="NP_001356322" sequenceVersion="1" change="p.Gly329fs" singleLetterProteinChange="G329fs">
+            <Expression>NP_001356322.1:p.Gly329fs</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001589" Type="frameshift variant" DB="SO"/>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001369394.2" sequenceAccession="NM_001369394" sequenceVersion="2" change="c.986_996del">
+            <Expression>NM_001369394.2:c.986_996del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_001356323.1" sequenceAccession="NP_001356323" sequenceVersion="1" change="p.Gly329fs" singleLetterProteinChange="G329fs">
+            <Expression>NP_001356323.1:p.Gly329fs</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001589" Type="frameshift variant" DB="SO"/>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001386137.1" sequenceAccession="NM_001386137" sequenceVersion="1" change="c.596_606del">
+            <Expression>NM_001386137.1:c.596_606del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_001373066.1" sequenceAccession="NP_001373066" sequenceVersion="1" change="p.Gly199fs" singleLetterProteinChange="G199fs">
+            <Expression>NP_001373066.1:p.Gly199fs</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001589" Type="frameshift variant" DB="SO"/>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001386138.1" sequenceAccession="NM_001386138" sequenceVersion="1" change="c.596_606del">
+            <Expression>NM_001386138.1:c.596_606del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_001373067.1" sequenceAccession="NP_001373067" sequenceVersion="1" change="p.Gly199fs" singleLetterProteinChange="G199fs">
+            <Expression>NP_001373067.1:p.Gly199fs</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001589" Type="frameshift variant" DB="SO"/>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_001386139.1" sequenceAccession="NM_001386139" sequenceVersion="1" change="c.596_606del">
+            <Expression>NM_001386139.1:c.596_606del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_001373068.1" sequenceAccession="NP_001373068" sequenceVersion="1" change="p.Gly199fs" singleLetterProteinChange="G199fs">
+            <Expression>NP_001373068.1:p.Gly199fs</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001589" Type="frameshift variant" DB="SO"/>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="NM_004992.4" sequenceAccession="NM_004992" sequenceVersion="4" change="c.1265_1275del" MANEPlusClinical="true">
+            <Expression>NM_004992.4:c.1265_1275del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="NP_004983.1" sequenceAccession="NP_004983" sequenceVersion="1" change="p.Gly422fs" singleLetterProteinChange="G422fs">
+            <Expression>NP_004983.1:p.Gly422fs</Expression>
+          </ProteinExpression>
+          <MolecularConsequence ID="SO:0001589" Type="frameshift variant" DB="SO"/>
+        </HGVS>
+        <HGVS Type="genomic">
+          <NucleotideExpression sequenceAccessionVersion="LRG_764" sequenceAccession="LRG_764">
+            <Expression>LRG_764:g.111541_111551del</Expression>
+          </NucleotideExpression>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="LRG_764t1" sequenceAccession="LRG_764t1">
+            <Expression>LRG_764t1:c.1301_1311del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="LRG_764p1" sequenceAccession="LRG_764p1" change="p.Gly434fs">
+            <Expression>LRG_764p1:p.Gly434fs</Expression>
+          </ProteinExpression>
+        </HGVS>
+        <HGVS Type="coding">
+          <NucleotideExpression sequenceAccessionVersion="LRG_764t2" sequenceAccession="LRG_764t2">
+            <Expression>LRG_764t2:c.1265_1275del</Expression>
+          </NucleotideExpression>
+          <ProteinExpression sequenceAccessionVersion="LRG_764p2" sequenceAccession="LRG_764p2" change="p.Gly422fs">
+            <Expression>LRG_764p2:p.Gly422fs</Expression>
+          </ProteinExpression>
+        </HGVS>
+      </HGVSlist>
+      <XRefList>
+        <XRef Type="Interpreted" ID="4857318" DB="ClinVar"/>
+      </XRefList>
+    </SimpleAllele>
+    <Classifications>
+      <GermlineClassification NumberOfSubmissions="0" NumberOfSubmitters="0">
+        <ReviewStatus>no classification for the single variant</ReviewStatus>
+        <Description>no classification for the single variant</Description>
+      </GermlineClassification>
+      <SomaticClinicalImpact NumberOfSubmissions="0" NumberOfSubmitters="0">
+        <ReviewStatus>no classification for the single variant</ReviewStatus>
+        <Description>no classification for the single variant</Description>
+      </SomaticClinicalImpact>
+      <OncogenicityClassification NumberOfSubmissions="0" NumberOfSubmitters="0">
+        <ReviewStatus>no classification for the single variant</ReviewStatus>
+        <Description>no classification for the single variant</Description>
+      </OncogenicityClassification>
+    </Classifications>
+    <SubmittedClassificationList>
+      <SCV Accession="SCV007614629" Version="1"/>
+    </SubmittedClassificationList>
+    <ClassifiedVariationList>
+      <ClassifiedVariation VariationID="4857318" Accession="VCV004857318" Version="2"/>
+    </ClassifiedVariationList>
+  </IncludedRecord>
+</VariationArchive>
+</ClinVarResult-Set>
