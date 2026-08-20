@@ -1,10 +1,55 @@
 # Static-check gate. Run locally with `uv run pre-commit run --all-files`.
-# The generated tree (generated/) is gitignored, so only first-party files are
-# checked.
+# lint.yml runs the same command, so a hook added here is gated in CI with no
+# workflow edit. The generated tree (generated/) is gitignored, so only
+# first-party files are checked.
+default_language_version:
+  python: python3.13
+
+# The vendored XSD and the record fixtures are upstream bytes: the XSD's MD5 is a
+# documented claim in the README, and the fixtures are what the round-trip gate
+# asserts against. A whitespace rewrite would silently break both, so the
+# byte-touching hooks skip them.
+exclude: '^(ClinVar_VCV_.*\.xsd|tests/records/)'
+
 repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      # The transforms file is the repo's primary authored artifact; a YAML typo
+      # there is the most likely way to break generation.
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: detect-private-key
+      - id: check-added-large-files
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.16.3
     hooks:
       - id: ruff
         args: [--fix]
       - id: ruff-format
+
+  # Markdown formatter. mdformat is CommonMark-strict, so intraword `_`
+  # (snake_case identifiers) stays literal and fenced code is left untouched.
+  # gfm gives tables, which the READMEs use for the module lists.
+  - repo: https://github.com/hukkin/mdformat
+    rev: 1.0.0
+    hooks:
+      - id: mdformat
+        args: ["--wrap", "120"]
+        additional_dependencies:
+          - mdformat-gfm==1.0.0
+
+  # YAML formatter (config in .yamlfmt) — for workflows and this config.
+  - repo: https://github.com/google/yamlfmt
+    rev: v0.21.0
+    hooks:
+      - id: yamlfmt
+        # The transforms file is exempt: yamlfmt re-emits folded block scalars
+        # (`>-`) as single long lines, which would turn the hand-written schema
+        # documentation — the repo's main authored asset — into unreadable blobs
+        # and make every future edit a whole-paragraph diff.
+        exclude: '^clinvar_transforms\.yaml$'

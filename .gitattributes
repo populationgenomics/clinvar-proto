@@ -1,0 +1,8 @@
+# Vendored upstream schema: NCBI's file, byte-identical by design (its MD5 is
+# documented in the README). Never rewritten by a hygiene hook, never counted in
+# GitHub's language stats, collapsed in diffs.
+ClinVar_VCV_*.xsd linguist-vendored=true
+
+# Record fixtures: real NCBI efetch output, kept verbatim. Collapse in diffs and
+# drop from language stats — otherwise GitHub calls this an XML repo.
+tests/records/*.xml linguist-generated=true
