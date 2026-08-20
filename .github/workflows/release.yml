@@ -1,0 +1,58 @@
+name: release
+
+# Publishes the generated `clinvar_proto` wheel to PyPI via Trusted Publishing
+# (OIDC) — no API token. The PyPI project's trusted publisher must reference
+# this repo, this workflow filename, and the `pypi` environment.
+#
+# Triggered on a published GitHub Release. Unlike a normal package repo, the
+# distributable is generated from the XSD + transforms, so the build job runs
+# `xsdformer build` first, then builds the wheel from the generated tree. The
+# release tag (vX.Y.Z) must match `build.version` in clinvar_transforms.yaml —
+# the version xsdformer stamps into the wheel.
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v8.2.0
+        with:
+          enable-cache: true
+      # Publishing a version is irreversible, so fail loudly if the release tag
+      # doesn't match the version the wheel will declare.
+      - name: Check tag matches generated package version
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          pkg="$(uv run --no-project --with pyyaml python -c "import yaml; print(yaml.safe_load(open('clinvar_transforms.yaml'))['build']['version'])")"
+          if [ "$tag" != "$pkg" ]; then
+            echo "Release tag '$GITHUB_REF_NAME' does not match build.version '$pkg' in clinvar_transforms.yaml"
+            exit 1
+          fi
+      # Generate the package source tree from the XSD + transforms...
+      - run: uv run --locked xsdformer build ClinVar_VCV_2.6.xsd --transforms clinvar_transforms.yaml --out-dir generated
+      # ...then build the wheel + sdist from it.
+      - run: uv build --out-dir dist
+        working-directory: generated
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: generated/dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    # The trusted-publisher and OIDC scope both key off this environment name.
+    environment: pypi
+    permissions:
+      id-token: write # mint the OIDC token PyPI exchanges for an upload token
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
