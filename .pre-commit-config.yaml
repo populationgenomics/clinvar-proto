@@ -1,0 +1,10 @@
+# Static-check gate. Run locally with `uv run pre-commit run --all-files`.
+# The generated tree (generated/) is gitignored, so only first-party files are
+# checked.
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.3
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format

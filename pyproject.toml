@@ -17,5 +17,38 @@ test = [
   "pydantic>=2",
 ]
 
+lint = ["ruff", "pre-commit"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+# The generated tree (generated/) is gitignored and not linted; the only
+# first-party Python here is the test suite. Config mirrors the CPG standard
+# (litfetch / themis-internal), scoped down to what this repo carries.
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint]
+select = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "W", "ARG", "PL", "RET", "RUF", "SIM", "UP"]
+ignore = [
+  "COM812",  # conflicts with the formatter
+  "D100", "D101", "D102", "D103", "D104",  # don't require docstrings on every symbol
+  "Q000", "Q003",  # single-quote formatter handles quote style
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+  "S101",   # asserts are the pytest idiom
+  "S603",   # subprocess calls are intentional here
+  "S607",   # invoking the xsdformer CLI by name is intentional
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

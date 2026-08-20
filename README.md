@@ -25,12 +25,12 @@ pip install clinvar_proto      # or: uv add clinvar_proto
 from lxml import etree
 from clinvar_proto import xml_converter, pydantic_converter, models
 
-tree = etree.parse("clinvar_release.xml")
-archive_el = tree.getroot().find("VariationArchive")
+tree = etree.parse('clinvar_release.xml')
+archive_el = tree.getroot().find('VariationArchive')
 
-proto = xml_converter.VariationArchiveType(archive_el)              # XML -> protobuf
-model = pydantic_converter.VariationArchiveType_from_proto(proto)   # protobuf -> pydantic
-json_str = model.model_dump_json()                                  # pydantic -> JSON
+proto = xml_converter.VariationArchiveType(archive_el)  # XML -> protobuf
+model = pydantic_converter.VariationArchiveType_from_proto(proto)  # protobuf -> pydantic
+json_str = model.model_dump_json()  # pydantic -> JSON
 ```
 
 Release files are large, so consumers normally stream them with
