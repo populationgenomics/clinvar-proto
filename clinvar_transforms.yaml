@@ -1,7 +1,28 @@
 build:
   namespace: clinvar
-  package_name: clinvar_proto
-  version: 0.1.0
+  package_name: clinvar_proto      # import module (must be a valid identifier)
+  distribution_name: clinvar-proto # [project] name on PyPI (kebab, for consistency)
+  version: "0.1.0"
+  description: "Typed protobuf + pydantic models and converters for NCBI ClinVar VCV XML."
+  license: MIT                     # SPDX; do NOT also add a License :: classifier (PEP 639)
+  readme: README.md                # resolved relative to this config file (repo root)
+  license_file: LICENSE
+  authors:
+    - name: "Centre for Population Genomics"
+  keywords: [clinvar, ncbi, variant, protobuf, pydantic, xml, bioinformatics, genomics]
+  urls:
+    Repository: "https://github.com/populationgenomics/clinvar-proto"
+    Issues: "https://github.com/populationgenomics/clinvar-proto/issues"
+  classifiers:
+    - "Development Status :: 3 - Alpha"
+    - "Intended Audience :: Science/Research"
+    - "Operating System :: OS Independent"
+    - "Programming Language :: Python :: 3"
+    - "Programming Language :: Python :: 3.11"
+    - "Programming Language :: Python :: 3.12"
+    - "Programming Language :: Python :: 3.13"
+    - "Topic :: Scientific/Engineering :: Bio-Informatics"
+    - "Typing :: Typed"
 inline_wrappers: true
 flatten_list_wrappers: true
 comments:
