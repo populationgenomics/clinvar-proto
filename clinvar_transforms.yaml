@@ -1,31 +1,34 @@
 build:
   authors:
-  - name: Centre for Population Genomics
+    - name: Centre for Population Genomics
   classifiers:
-  - 'Development Status :: 3 - Alpha'
-  - 'Intended Audience :: Science/Research'
-  - 'Operating System :: OS Independent'
-  - 'Programming Language :: Python :: 3'
-  - 'Programming Language :: Python :: 3.11'
-  - 'Programming Language :: Python :: 3.12'
-  - 'Programming Language :: Python :: 3.13'
-  - 'Topic :: Scientific/Engineering :: Bio-Informatics'
-  - 'Typing :: Typed'
+    - 'Development Status :: 3 - Alpha'
+    - 'Intended Audience :: Science/Research'
+    - 'Operating System :: OS Independent'
+    - 'Programming Language :: Python :: 3'
+    - 'Programming Language :: Python :: 3.11'
+    - 'Programming Language :: Python :: 3.12'
+    - 'Programming Language :: Python :: 3.13'
+    - 'Topic :: Scientific/Engineering :: Bio-Informatics'
+    - 'Typing :: Typed'
   description: Typed protobuf + pydantic models and converters for NCBI ClinVar VCV XML.
   distribution_name: clinvar-proto
   keywords:
-  - clinvar
-  - ncbi
-  - variant
-  - protobuf
-  - pydantic
-  - xml
-  - bioinformatics
-  - genomics
+    - clinvar
+    - ncbi
+    - variant
+    - protobuf
+    - pydantic
+    - xml
+    - bioinformatics
+    - genomics
+  # SPDX; do NOT also add a License :: classifier (PEP 639).
   license: MIT
   license_file: LICENSE
   namespace: clinvar
+  # Import module name; must be a valid Python identifier.
   package_name: clinvar_proto
+  # Resolved relative to this config file (repo root).
   readme: README.md
   urls:
     Issues: https://github.com/populationgenomics/clinvar-proto/issues
@@ -35,149 +38,77 @@ comments:
   Accession.date_deleted: The date the SCV was deleted.
   Accession.value: The accession of the deleted SCV.
   Accession.version: The version of the deleted SCV.
-  AggregateGermlineReviewStatusValue: 'Aggregate germline review status across every submission on the
-    record. The gold-star count is derived from this value; it is NOT this enum''s ordinal. 0 stars: ''no
-    classification provided'', ''no assertion criteria provided'', ''no classifications from unflagged
-    records'', ''no classification for the single variant''; 1 star: ''criteria provided, single submitter''
-    or ''criteria provided, conflicting classifications''; 2 stars: ''criteria provided, multiple submitters,
-    no conflicts''; 3 stars: ''reviewed by expert panel''; 4 stars: ''practice guideline''.'
-  AggregateOncogenicityReviewStatusValue: Aggregate review status (star rating) across all oncogenicity
-    submissions. Uses the same 0-4 star scale as AggregateGermlineReviewStatusValue.
-  AggregateSomaticClinicalImpactReviewStatusValue: Aggregate review status across every somatic clinical
-    impact submission. ClinVar does not assess somatic submissions for conflicts, so this enumeration
-    has no 'conflicting classifications' member and its 2-star value is 'criteria provided, multiple submitters',
-    without the germline scale's 'no conflicts' suffix.
-  AggregatedGermlineClassification.description: Germline classification. Usually an ACMG/AMP term (Pathogenic,
-    Likely pathogenic, Uncertain significance, Likely benign, Benign), or a composite formed by joining
-    terms with '/' — 'Pathogenic/Likely pathogenic', 'Benign/Likely benign', and across categories 'Pathogenic/Established
-    risk allele'; also 'Conflicting classifications of pathogenicity', the ClinGen low-penetrance and
-    risk-allele terms (Pathogenic/Likely pathogenic, low penetrance; Established risk allele; Likely risk
-    allele; Uncertain risk allele), and non-standard terms (drug response, risk factor, association, protective,
-    Affects, other, not provided). The value space is open — do not treat it as an enumeration. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
-  AggregatedGermlineClassification.explanation: Populated when the description is 'Conflicting classifications
-    of pathogenicity'; the value enumerates the conflicting classifications with submission counts, e.g.
-    'Uncertain significance (1); Benign (1)'. The XSD's own annotation instead names 'conflicting data
-    from submitters' — a germline classification term retained from early submissions by a single consortium,
-    not the aggregate conflict description.
-  AggregatedGermlineClassification.review_status: Aggregate review status (star rating) from all germline
-    submissions for this variant.
-  AggregatedNoClassification.description: Why the record carries no classification, aggregated over its
-    submissions. The value space is not enumerated in the XSD; see https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
-  AggregatedOncogenicityClassification.description: 'Oncogenicity classification on the ClinGen/CGC/VICC
-    terms (PMID 36063163): Oncogenic, Likely oncogenic, Uncertain significance, Likely benign, Benign;
-    also the composites ''Oncogenic/Likely oncogenic'' and ''Benign/Likely benign'', and ''Conflicting
-    classifications of oncogenicity''. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.'
-  AggregatedOncogenicityClassification.explanation: Populated when the description is 'Conflicting classifications
-    of oncogenicity'; the value enumerates the conflicting classifications with submission counts. The
-    XSD's own annotation instead names 'conflicting data from submitters' — a germline classification
-    term retained from early submissions by a single consortium, not the aggregate conflict description.
-  AggregatedOncogenicityClassification.review_status: Aggregate review status (star rating) from all oncogenicity
-    submissions for this variant.
-  AggregatedSomaticClinicalImpact.description: Somatic clinical impact on the AMP/ASCO/CAP tiers (PMID
-    27993330), reported verbatim as 'Tier I - Strong', 'Tier II - Potential', 'Tier III - Unknown', 'Tier
-    IV - Benign/Likely benign'. The aggregate is the HIGHEST tier reported by the submissions at the record's
-    review-status tier — not a consensus; conflicts are not calculated, and different tiers for different
-    tumour types are expected. Conditions reported at a lower tier are marked in condition_list. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
-  AggregatedSomaticClinicalImpact.review_status: Aggregate review status (star rating) from all somatic
-    clinical impact submissions for this variant.
-  Allele: A single sequence change (simple allele) relative to a reference. Contrast with Haplotype (multiple
-    changes on one chromosome) and Genotype (changes on both chromosomes of a homologous pair).
-  Allele.allele_id: ClinVar's identifier for this individual variant. The AlleleID and VariationID numbering
-    spaces OVERLAP, so a bare integer is ambiguous without its context; one AlleleID can belong to several
-    VariationIDs (haplotypes, genotypes).
-  Allele.canonical_spdi: Canonical SPDI (Sequence:Position:Deleted:Inserted) — a fully justified, transcript-independent
-    representation anchored to a genomic RefSeq accession, so it is specific to THAT assembly, not build-independent.
+  AggregateGermlineReviewStatusValue: 'Aggregate germline review status across every submission on the record. The gold-star count is derived from this value; it is NOT this enum''s ordinal. 0 stars: ''no classification provided'', ''no assertion criteria provided'', ''no classifications from unflagged records'', ''no classification for the single variant''; 1 star: ''criteria provided, single submitter'' or ''criteria provided, conflicting classifications''; 2 stars: ''criteria provided, multiple submitters, no conflicts''; 3 stars: ''reviewed by expert panel''; 4 stars: ''practice guideline''.'
+  AggregateOncogenicityReviewStatusValue: Aggregate review status (star rating) across all oncogenicity submissions. Uses the same 0-4 star scale as AggregateGermlineReviewStatusValue.
+  AggregateSomaticClinicalImpactReviewStatusValue: Aggregate review status across every somatic clinical impact submission. ClinVar does not assess somatic submissions for conflicts, so this enumeration has no 'conflicting classifications' member and its 2-star value is 'criteria provided, multiple submitters', without the germline scale's 'no conflicts' suffix.
+  AggregatedGermlineClassification.description: Germline classification. Usually an ACMG/AMP term (Pathogenic, Likely pathogenic, Uncertain significance, Likely benign, Benign), or a composite formed by joining terms with '/' — 'Pathogenic/Likely pathogenic', 'Benign/Likely benign', and across categories 'Pathogenic/Established risk allele'; also 'Conflicting classifications of pathogenicity', the ClinGen low-penetrance and risk-allele terms (Pathogenic/Likely pathogenic, low penetrance; Established risk allele; Likely risk allele; Uncertain risk allele), and non-standard terms (drug response, risk factor, association, protective, Affects, other, not provided). The value space is open — do not treat it as an enumeration. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
+  AggregatedGermlineClassification.explanation: Populated when the description is 'Conflicting classifications of pathogenicity'; the value enumerates the conflicting classifications with submission counts, e.g. 'Uncertain significance (1); Benign (1)'. The XSD's own annotation instead names 'conflicting data from submitters' — a germline classification term retained from early submissions by a single consortium, not the aggregate conflict description.
+  AggregatedGermlineClassification.review_status: Aggregate review status (star rating) from all germline submissions for this variant.
+  AggregatedNoClassification.description: Why the record carries no classification, aggregated over its submissions. The value space is not enumerated in the XSD; see https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
+  AggregatedOncogenicityClassification.description: 'Oncogenicity classification on the ClinGen/CGC/VICC terms (PMID 36063163): Oncogenic, Likely oncogenic, Uncertain significance, Likely benign, Benign; also the composites ''Oncogenic/Likely oncogenic'' and ''Benign/Likely benign'', and ''Conflicting classifications of oncogenicity''. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.'
+  AggregatedOncogenicityClassification.explanation: Populated when the description is 'Conflicting classifications of oncogenicity'; the value enumerates the conflicting classifications with submission counts. The XSD's own annotation instead names 'conflicting data from submitters' — a germline classification term retained from early submissions by a single consortium, not the aggregate conflict description.
+  AggregatedOncogenicityClassification.review_status: Aggregate review status (star rating) from all oncogenicity submissions for this variant.
+  AggregatedSomaticClinicalImpact.description: Somatic clinical impact on the AMP/ASCO/CAP tiers (PMID 27993330), reported verbatim as 'Tier I - Strong', 'Tier II - Potential', 'Tier III - Unknown', 'Tier IV - Benign/Likely benign'. The aggregate is the HIGHEST tier reported by the submissions at the record's review-status tier — not a consensus; conflicts are not calculated, and different tiers for different tumour types are expected. Conditions reported at a lower tier are marked in condition_list. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
+  AggregatedSomaticClinicalImpact.review_status: Aggregate review status (star rating) from all somatic clinical impact submissions for this variant.
+  Allele: A single sequence change (simple allele) relative to a reference. Contrast with Haplotype (multiple changes on one chromosome) and Genotype (changes on both chromosomes of a homologous pair).
+  Allele.allele_id: ClinVar's identifier for this individual variant. The AlleleID and VariationID numbering spaces OVERLAP, so a bare integer is ambiguous without its context; one AlleleID can belong to several VariationIDs (haplotypes, genotypes).
+  Allele.canonical_spdi: Canonical SPDI (Sequence:Position:Deleted:Inserted) — a fully justified, transcript-independent representation anchored to a genomic RefSeq accession, so it is specific to THAT assembly, not build-independent.
   Allele.gene_list: 0 to many genes (and related data) related to the allele being reported.
   Allele.protein_change: Single-letter representations of the protein change (e.g. R123H).
   AlleleDescr: Description of an allele in a co-occurrence set, used in trans/cis analysis.
   AlleleScv: An allele from a single submitted clinical variant record (SCV).
   AlleleScv.gene_list: 0 to many genes (and related data) related to the allele being reported.
-  AlleleScv.molecular_consequence_list: Currently redundant with the MolecularConsequence element of the
-    HGVS element.
+  AlleleScv.molecular_consequence_list: Currently redundant with the MolecularConsequence element of the HGVS element.
   AlleleScv.protein_change: Single-letter representation of the amino acid change and its location.
   Attribute.type: Type key for the attribute value. Examples include 'GARD id', 'keyword'.
-  ChromosomeStr: 'Non-numeric chromosome names: X, Y, MT, PAR, Un. Numeric chromosomes 1-22 come from
-    ChromosomeNr; the Chr attribute is the union of both.'
+  ChromosomeStr: 'Non-numeric chromosome names: X, Y, MT, PAR, Un. Numeric chromosomes 1-22 come from ChromosomeNr; the Chr attribute is the union of both.'
   Citation.citation_text: Use only when there is no database ID for the publication and no URL.
-  Citation.type: 'NCBI-assigned citation type, not expected from submitters. Values include: general,
-    review, practice guideline, Position Statement, Translational/Evidence-based, Suggested Reading, Recommendation.'
+  Citation.type: 'NCBI-assigned citation type, not expected from submitters. Values include: general, review, practice guideline, Position Statement, Translational/Evidence-based, Suggested Reading, Recommendation.'
   Citation.url: Complete URL of the citation.
-  ClassificationTypeScv: The classification from a single submitted clinical variant record (SCV). This
-    is one submitter's verdict, before aggregation across all SCVs into the VCV.
+  ClassificationTypeScv: The classification from a single submitted clinical variant record (SCV). This is one submitter's verdict, before aggregation across all SCVs into the VCV.
   ClassificationTypeScv.comment: Explanation of the classification, providing the submitter's rationale.
   ClassificationTypeScv.date_last_evaluated: Date the classification was last evaluated by the submitter.
-  ClassificationTypeScv.germline_classification: This submitter's own germline classification, as submitted
-    — the per-submission counterpart to AggregatedGermlineClassification.description. The submission value
-    space additionally admits the VUS sub-tiers 'VUS-high', 'VUS-mid' and 'VUS-low'; whether a sub-tier
-    survives into the aggregate description is not documented upstream. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
-  ClassificationTypeScv.review_status: Single-submitter review status; see SubmitterReviewStatusValue
-    for allowed values.
-  ClinAsserTraitSetType: A set of traits. Used for an SCV's own TraitSet, for the aggregate Classifications/*/ConditionList/TraitSet,
-    and for functional-evidence annotations.
-  ClinAsserTraitSetType.contributes_to_aggregate_classification: On a TraitSet in an aggregate ConditionList,
-    whether this condition was reported by submissions that contribute to the aggregate classification
-    (same precedence rule as MeasureTraitType.contributes_to_aggregate_classification).
-  ClinAsserTraitSetType.lower_level_of_evidence: On a TraitSet in a somatic ConditionList, marks a condition
-    for which a LOWER tier than the aggregate's highest was reported — not a judgement on the submission's
-    evidence quality.
-  ClinAsserTraitSetType.multiple_condition_explanation: An explanation provided when the submission covers
-    multiple conditions simultaneously.
-  ClinAsserTraitType.clinical_features_affected_status: Whether each clinical feature was present, absent,
-    or not tested in the observed individuals.
+  ClassificationTypeScv.germline_classification: This submitter's own germline classification, as submitted — the per-submission counterpart to AggregatedGermlineClassification.description. The submission value space additionally admits the VUS sub-tiers 'VUS-high', 'VUS-mid' and 'VUS-low'; whether a sub-tier survives into the aggregate description is not documented upstream. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
+  ClassificationTypeScv.review_status: Single-submitter review status; see SubmitterReviewStatusValue for allowed values.
+  ClinAsserTraitSetType: A set of traits. Used for an SCV's own TraitSet, for the aggregate Classifications/*/ConditionList/TraitSet, and for functional-evidence annotations.
+  ClinAsserTraitSetType.contributes_to_aggregate_classification: On a TraitSet in an aggregate ConditionList, whether this condition was reported by submissions that contribute to the aggregate classification (same precedence rule as MeasureTraitType.contributes_to_aggregate_classification).
+  ClinAsserTraitSetType.lower_level_of_evidence: On a TraitSet in a somatic ConditionList, marks a condition for which a LOWER tier than the aggregate's highest was reported — not a judgement on the submission's evidence quality.
+  ClinAsserTraitSetType.multiple_condition_explanation: An explanation provided when the submission covers multiple conditions simultaneously.
+  ClinAsserTraitType.clinical_features_affected_status: Whether each clinical feature was present, absent, or not tested in the observed individuals.
   ClinAsserTraitType.trait_relationship: Relationships to other traits (e.g. Subphenotype, DrugResponseAndDisease).
-  ClinVarAccession: The SCV (submitted record in ClinVar) accession for one submitter's record. SCV accessions
-    have the format SCV + 9 digits + version suffix (e.g. SCV000000001.1).
+  ClinVarAccession: The SCV (submitted record in ClinVar) accession for one submitter's record. SCV accessions have the format SCV + 9 digits + version suffix (e.g. SCV000000001.1).
   ClinVarAccession.date_created: Date when this SCV first became public in ClinVar.
   ClinVarAccession.date_updated: Date when the latest update to this SCV became public in ClinVar.
   ClinVarAccession.type: Always 'SCV'. Maintained for consistency with ClinVarFullRelease.
-  ClinVarSubmissionId.local_key: Identifier provided by the submitter to match their internal records.
-    If not provided by the submitter, NCBI generates one. Whether submitter-provided is indicated by local_key_is_submitted.
-  ClinVarSubmissionId.local_key_is_submitted: True if the local_key was provided by the submitter (vs
-    NCBI-generated).
+  ClinVarSubmissionId.local_key: Identifier provided by the submitter to match their internal records. If not provided by the submitter, NCBI generates one. Whether submitter-provided is indicated by local_key_is_submitted.
+  ClinVarSubmissionId.local_key_is_submitted: True if the local_key was provided by the submitter (vs NCBI-generated).
   ClinicalAssertionRecordHistory: Record of changes to a submitted clinical variant record (SCV).
   ClinicalFeaturesAffectedStatusType: Allowed values are 'present', 'absent', and 'not tested'.
-  ClinicalSignificanceType.description: Carries old-style (pre-2023) clinical significance data from AlleleDescriptionSet
-    within Co-occurrenceSet, before the current three-category classification model was adopted.
-  ClinicalSignificanceType.explanation: 'Legacy Co-occurrenceSet structure: populated when the old-style
-    description was ''conflicting data from submitters'', a value ClinVar has retired.'
+  ClinicalSignificanceType.description: Carries old-style (pre-2023) clinical significance data from AlleleDescriptionSet within Co-occurrenceSet, before the current three-category classification model was adopted.
+  ClinicalSignificanceType.explanation: 'Legacy Co-occurrenceSet structure: populated when the old-style description was ''conflicting data from submitters'', a value ClinVar has retired.'
   ClinicalSignificanceType.review_status: Review status of the submission.
-  CoOccurrenceType.zygosity: Zygosity of the variant BEING ASSERTED in this observation (e.g. CompoundHeterozygote).
-    The co-occurring variants are in allele_desc_set, each with its own zygosity and cis/trans orientation.
-  Comment.type: Comment category. 'public' is a plain public comment; the remaining values are specific
-    NCBI-applied kinds — ConvertedByNCBI, MissingFromAssembly, GenomicLocationNotEstablished, LocationOnGenomeAndProductNotAligned,
-    DeletionComment, MergeComment, AssemblySpecificAlleleDefinition, AlignmentGapMakesAppearInconsistent,
-    ExplanationOfClassification, FlaggedComment.
+  CoOccurrenceType.zygosity: Zygosity of the variant BEING ASSERTED in this observation (e.g. CompoundHeterozygote). The co-occurring variants are in allele_desc_set, each with its own zygosity and cis/trans orientation.
+  Comment.type: Comment category. 'public' is a plain public comment; the remaining values are specific NCBI-applied kinds — ConvertedByNCBI, MissingFromAssembly, GenomicLocationNotEstablished, LocationOnGenomeAndProductNotAligned, DeletionComment, MergeComment, AssemblySpecificAlleleDefinition, AlignmentGapMakesAppearInconsistent, ExplanationOfClassification, FlaggedComment.
   Comment.value: Free text comment. Line breaks are retained, but no other formatting.
-  FamilyInfo.family_history: Free text describing what kind of family data is available; the submitter
-    may give only 'Yes' or 'No' when there are no further details.
+  FamilyInfo.family_history: Free text describing what kind of family data is available; the submitter may give only 'Yes' or 'No' when there are no further details.
   FamilyInfo.num_families: Total families tested; denominator for 'Number of families with variant'.
-  FamilyInfo.num_families_with_segregation_observed: Families where the variant co-segregates with the
-    condition in two or more family members.
+  FamilyInfo.num_families_with_segregation_observed: Families where the variant co-segregates with the condition in two or more family members.
   FamilyInfo.num_families_with_variant: Families in which the variant was observed.
-  FamilyInfo.pedigree_id: Anonymous identifier linking individual observations from the same family across
-    multiple records.
-  FunctionalConsequence.value: Functional consequence reported by the submitter; may be an ontology term
-    (with source and id giving the ontology) or free text.
+  FamilyInfo.pedigree_id: Anonymous identifier linking individual observations from the same family across multiple records.
+  FunctionalConsequence.value: Functional consequence reported by the submitter; may be an ontology term (with source and id giving the ontology) or free text.
   Gene.haploinsufficiency: ClinGen haploinsufficiency score and supporting evidence for this gene.
-  Gene.property: Keywords for retrieval or display (e.g. genes listed by the ACMG guidelines for secondary
-    findings).
+  Gene.property: Keywords for retrieval or display (e.g. genes listed by the ACMG guidelines for secondary findings).
   Gene.source: Whether the gene association was 'calculated' by NCBI or 'submitted' by the submitter.
   Gene.xref: Gene-specific external identifiers, such as MIM number, Gene ID, HGNC ID.
-  Genotype: Sequence changes on both chromosomes of a homologous pair. Contrast with Haplotype (changes
-    on one chromosome) and SimpleAllele (a single change).
+  Genotype: Sequence changes on both chromosomes of a homologous pair. Contrast with Haplotype (changes on one chromosome) and SimpleAllele (a single change).
   Genotype.haplotype: Allows more than 2 haplotypes per genotype to support representation of ploidy.
   Genotype.simple_allele: A single sequence change contributing to this genotype.
   GenotypeScv.haplotype: Allows more than 2 haplotypes per genotype to support representation of ploidy.
-  GermlineClassification.review_status: Aggregate review status (star rating) from all germline submissions
-    for this variant.
-  Haploinsufficiency: ClinGen haploinsufficiency score for this gene — evidence that losing one copy causes
-    disease.
-  Haploinsufficiency.clin_gen: URL to the ClinGen dosage sensitivity page for this gene's haploinsufficiency
-    score.
-  Haploinsufficiency.value: Haploinsufficiency score description. E.g. 'Little evidence for dosage pathogenicity',
-    'Sufficient evidence for dosage pathogenicity'.
-  Haplotype: Multiple sequence changes on one chromosome of a homologous pair (or the mitochondrion).
-    Contrast with SimpleAllele (a single change) and Genotype (changes on both chromosomes).
+  GermlineClassification.review_status: Aggregate review status (star rating) from all germline submissions for this variant.
+  Haploinsufficiency: ClinGen haploinsufficiency score for this gene — evidence that losing one copy causes disease.
+  Haploinsufficiency.clin_gen: URL to the ClinGen dosage sensitivity page for this gene's haploinsufficiency score.
+  Haploinsufficiency.value: Haploinsufficiency score description. E.g. 'Little evidence for dosage pathogenicity', 'Sufficient evidence for dosage pathogenicity'.
+  Haplotype: Multiple sequence changes on one chromosome of a homologous pair (or the mitochondrion). Contrast with SimpleAllele (a single change) and Genotype (changes on both chromosomes).
   Haplotype.hgvslist: All HGVS expressions valid for, or used to submit, this haplotype.
   Haplotype.number_of_chromosomes: Number of chromosomes carrying this haplotype.
   Haplotype.number_of_copies: Number of copies of this haplotype.
@@ -185,167 +116,88 @@ comments:
   HaplotypeScv.number_of_copies: Number of copies of this haplotype.
   Id.source: Database providing the citation identifier. E.g. PubMed, PubMedCentral, DOI, NCBI bookshelf.
   Id.value: Identifier from the source database for this citation.
-  IncludedRecord: A simple allele or haplotype referenced by ClassifiedRecords but submitted without an
-    independent classification. Its Classifications block is PRESENT but reports, for each classification
-    type, a review status and the description 'no classification for the single variant' (zero stars).
-  IncludedRecord.classified_variation_list: Classified variants (with their own VCV) that incorporate
-    this included variant, maintaining referential integrity for indexing and retrieval.
-  IncludedRecord.haplotype: A haplotype (multiple sequence changes on one chromosome) included in this
-    record but submitted without an independent classification.
+  IncludedRecord: A simple allele or haplotype referenced by ClassifiedRecords but submitted without an independent classification. Its Classifications block is PRESENT but reports, for each classification type, a review status and the description 'no classification for the single variant' (zero stars).
+  IncludedRecord.classified_variation_list: Classified variants (with their own VCV) that incorporate this included variant, maintaining referential integrity for indexing and retrieval.
+  IncludedRecord.haplotype: A haplotype (multiple sequence changes on one chromosome) included in this record but submitted without an independent classification.
   IndicationListType.indication: The indication may be a set of phenotypic descriptions.
   IndicationListType.phenotype_set_type: The type of phenotype grouping (e.g. Disease, DrugResponse, Finding).
-  Location.cytogenetic_location: Cytogenetic band location (e.g. 17q21.31), maintained independently of
-    sequence coordinates and can be computed from them.
-  Location.sequence_location: Sequence-based location using 1-based offset coordinates, right-justified
-    to be consistent with HGVS. Includes reference and alternate allele, and start/stop values.
-  MeasureTraitType: 'A single submitted clinical variant record (SCV): one submitter''s classification
-    of a variant against a condition SET (see multiple_condition_explanation), identified by a unique
-    SCV accession. The variant-condition PAIR is the RCV.'
-  MeasureTraitType.additional_submitters: Additional submitters beyond the primary, used only when a batch
-    has multiple submitters.
-  MeasureTraitType.attribute_set: Package representing a unit of information with its source(s), identifiers,
-    and comments.
-  MeasureTraitType.clin_var_accession: The SCV accession for this record; only SCV (not VCV or RCV) accessions
-    are stored here.
-  MeasureTraitType.contributes_to_aggregate_classification: False when this SCV is outranked — ClinVar
-    aggregates only the highest review-status tier present (practice guideline > reviewed by expert panel
-    > criteria provided, single submitter > no assertion criteria provided). Also false for flagged records
-    and for SCVs submitted without a classification. A 0-star SCV DOES contribute when no higher tier
-    exists.
+  Location.cytogenetic_location: Cytogenetic band location (e.g. 17q21.31), maintained independently of sequence coordinates and can be computed from them.
+  Location.sequence_location: Sequence-based location using 1-based offset coordinates, right-justified to be consistent with HGVS. Includes reference and alternate allele, and start/stop values.
+  MeasureTraitType: 'A single submitted clinical variant record (SCV): one submitter''s classification of a variant against a condition SET (see multiple_condition_explanation), identified by a unique SCV accession. The variant-condition PAIR is the RCV.'
+  MeasureTraitType.additional_submitters: Additional submitters beyond the primary, used only when a batch has multiple submitters.
+  MeasureTraitType.attribute_set: Package representing a unit of information with its source(s), identifiers, and comments.
+  MeasureTraitType.clin_var_accession: The SCV accession for this record; only SCV (not VCV or RCV) accessions are stored here.
+  MeasureTraitType.contributes_to_aggregate_classification: False when this SCV is outranked — ClinVar aggregates only the highest review-status tier present (practice guideline > reviewed by expert panel > criteria provided, single submitter > no assertion criteria provided). Also false for flagged records and for SCVs submitted without a classification. A 0-star SCV DOES contribute when no higher tier exists.
   MeasureTraitType.date_created: Date when this SCV first became public in ClinVar.
   MeasureTraitType.date_last_updated: Date when the latest update to this SCV became public in ClinVar.
-  MeasureTraitType.fdarecognized_database: Whether this submission comes from an FDA-recognized public
-    human genetic variant database (e.g. a ClinGen expert panel). Germline submissions carry it too.
+  MeasureTraitType.fdarecognized_database: Whether this submission comes from an FDA-recognized public human genetic variant database (e.g. a ClinGen expert panel). Germline submissions carry it too.
   MeasureTraitType.replaced_list: SCV accessions that were replaced by (merged into) this SCV.
   MeasureTraitType.replaces: SCV accessions that this record supersedes.
-  MeasureTraitType.submission_date: Date ClinVar received this submission (distinct from the public release
-    date in date_created).
+  MeasureTraitType.submission_date: Date ClinVar received this submission (distinct from the public release date in date_created).
   Method.description: Free text supplementing the structured method fields with details not captured elsewhere.
-  Method.obs_method_attribute: Attribute specific to a particular method in conjunction with a particular
-    observation.
+  Method.obs_method_attribute: Attribute specific to a particular method in conjunction with a particular observation.
   Method.source_type: The source type of the method.
-  MethodType.description: Free text supplementing the structured method fields with details not captured
-    elsewhere.
-  MethodType.obs_method_attribute: Attribute specific to a particular method in conjunction with a particular
-    observation.
+  MethodType.description: Free text supplementing the structured method fields with details not captured elsewhere.
+  MethodType.obs_method_attribute: Attribute specific to a particular method in conjunction with a particular observation.
   Methodlist: The method used to collect data for a submission.
   MolecularConsequence.rs: dbSNP rs number for this variant.
   Name.type: Classification of the name, e.g. 'Preferred' or 'Alternate'.
-  ObservationSet.co_occurrence_set: Co-occurring variants observed in the same individuals, used for cis/trans
-    analysis.
-  ObservationSet.observed_data: AttributeSet with exactly one attribute, optionally supported by citations,
-    xrefs, and comments. At least one ObservedData is required; decimal values are stored as strings.
-  OncogenicityClassification.review_status: Aggregate review status (star rating) from all oncogenicity
-    submissions for this variant.
+  ObservationSet.co_occurrence_set: Co-occurring variants observed in the same individuals, used for cis/trans analysis.
+  ObservationSet.observed_data: AttributeSet with exactly one attribute, optionally supported by citations, xrefs, and comments. At least one ObservedData is required; decimal values are stored as strings.
+  OncogenicityClassification.review_status: Aggregate review status (star rating) from all oncogenicity submissions for this variant.
   PhenotypeDetails.date_evaluated: Date the phenotype features were evaluated.
   PhenotypeDetails.type: Separates biochemical test results from clinical feature descriptions.
-  PhenotypeListDetailsType.phenotype_details: Set of descriptors and values for person-specific phenotype
-    information.
-  PhenotypeListDetailsType.phenotype_set_type: The type of phenotype grouping (e.g. Disease, DrugResponse,
-    Finding).
-  PhenotypeSet: 'Category of the condition grouping: Disease, DrugResponse, Finding, PhenotypeInstruction,
-    TraitChoice.'
-  ProteinSequenceExpression.single_letter_protein_change: Protein change in single-letter amino acid code,
-    e.g. p.Arg123His → p.R123H.
-  Rcv: An RCV (Reference ClinVar) record. Each RCV links a single variant (VCV) to a single condition
-    or condition set. RCV accessions have the format RCV + 9 digits + version suffix.
+  PhenotypeListDetailsType.phenotype_details: Set of descriptors and values for person-specific phenotype information.
+  PhenotypeListDetailsType.phenotype_set_type: The type of phenotype grouping (e.g. Disease, DrugResponse, Finding).
+  PhenotypeSet: 'Category of the condition grouping: Disease, DrugResponse, Finding, PhenotypeInstruction, TraitChoice.'
+  ProteinSequenceExpression.single_letter_protein_change: Protein change in single-letter amino acid code, e.g. p.Arg123His → p.R123H.
+  Rcv: An RCV (Reference ClinVar) record. Each RCV links a single variant (VCV) to a single condition or condition set. RCV accessions have the format RCV + 9 digits + version suffix.
   Rcv.replaced_list: RCV accessions that were merged into this RCV.
-  RcvinterpretedCondition: The classified condition (disease or phenotype) associated with this RCV. The
-    value 'not provided' is used for submissions where no condition was named.
-  RcvinterpretedCondition.db: Database for the condition identifier; NOT enumerated in the XSD. In the
-    VCV release this is the MedGen concept for the condition (ClinVar maps every submitted trait to MedGen,
-    including 'not provided'); other vocabularies (OMIM, Orphanet, MeSH, MONDO, Human Phenotype Ontology)
-    appear on the trait's xref, not here.
+  RcvinterpretedCondition: The classified condition (disease or phenotype) associated with this RCV. The value 'not provided' is used for submissions where no condition was named.
+  RcvinterpretedCondition.db: Database for the condition identifier; NOT enumerated in the XSD. In the VCV release this is the MedGen concept for the condition (ClinVar maps every submitted trait to MedGen, including 'not provided'); other vocabularies (OMIM, Orphanet, MeSH, MONDO, Human Phenotype Ontology) appear on the trait's xref, not here.
   Rcvlist.independent_observations: Total independent observations supporting the RCV classification.
-  Rcvlist.rcvaccession: RCV accessions referencing this VariationID, supporting indexing and retrieval.
-    Does not describe RCV-to-SCV relationships; see clinical_assertion_list for those.
+  Rcvlist.rcvaccession: RCV accessions referencing this VariationID, supporting indexing and retrieval. Does not describe RCV-to-SCV relationships; see clinical_assertion_list for those.
   RecordHistory.variation_id: Populated only for VCV records, where the accession is of the form VCV000000009.
-  ReleaseType: A full release of the ClinVar database, containing one VariationArchive per variation —
-    classified records and included records alike.
-  Sample.number_chr_tested: Total chromosomes tested; denominator when 'Number of chromosomes with variant'
-    is reported.
+  ReleaseType: A full release of the ClinVar database, containing one VariationArchive per variation — classified records and included records alike.
+  Sample.number_chr_tested: Total chromosomes tested; denominator when 'Number of chromosomes with variant' is reported.
   Sample.number_females: Total female individuals in this observation set.
   Sample.number_males: Total male individuals in this observation set.
   Sample.number_tested: Total individuals in this observation set.
-  Sample.sex: Use only when explicit male/female counts are unavailable but sex composition is known.
-    Prefer number_males and number_females when possible.
-  Sample.somatic_variant_allele_fraction: Variant allele fraction (VAF) of the somatic variant in the
-    sample.
-  SingleGermlineClassification.description: Record-level germline classification aggregated over all germline
-    SCVs; same value space as AggregatedGermlineClassification.description, which adds description history,
-    the condition list and submitter/submission counts. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
-  SingleGermlineClassification.explanation: Populated when the description is 'Conflicting classifications
-    of pathogenicity'; the value enumerates the conflicting classifications with submission counts. The
-    XSD's own annotation instead names 'conflicting data from submitters' — a germline classification
-    term retained from early submissions by a single consortium, not the aggregate conflict description.
-  SingleGermlineClassification.review_status: Aggregate review status (star rating) across all germline
-    submissions for this record — NOT a per-submitter status; for that see ClassificationTypeScv.review_status.
-  SingleNoClassification.description: Why the record carries no classification. The value space is not
-    enumerated in the XSD; see https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
-  SingleOncogenicityClassification.description: Record-level oncogenicity classification aggregated over
-    all oncogenicity SCVs; same value space as AggregatedOncogenicityClassification.description. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
-  SingleOncogenicityClassification.explanation: Populated when the description is 'Conflicting classifications
-    of oncogenicity'; the value enumerates the conflicting classifications with submission counts. The
-    XSD's own annotation instead names 'conflicting data from submitters' — a germline classification
-    term retained from early submissions by a single consortium, not the aggregate conflict description.
-  SingleOncogenicityClassification.review_status: Aggregate review status (star rating) across all oncogenicity
-    submissions for this record — NOT a per-submitter status; for that see ClassificationTypeScv.review_status.
-  SingleSomaticClinicalImpact.description: Record-level somatic clinical impact aggregated over all somatic
-    SCVs; same value space as AggregatedSomaticClinicalImpact.description. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
-  SingleSomaticClinicalImpact.review_status: Aggregate review status (star rating) across all somatic
-    clinical impact submissions for this record — NOT a per-submitter status; for that see ClassificationTypeScv.review_status.
+  Sample.sex: Use only when explicit male/female counts are unavailable but sex composition is known. Prefer number_males and number_females when possible.
+  Sample.somatic_variant_allele_fraction: Variant allele fraction (VAF) of the somatic variant in the sample.
+  SingleGermlineClassification.description: Record-level germline classification aggregated over all germline SCVs; same value space as AggregatedGermlineClassification.description, which adds description history, the condition list and submitter/submission counts. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
+  SingleGermlineClassification.explanation: Populated when the description is 'Conflicting classifications of pathogenicity'; the value enumerates the conflicting classifications with submission counts. The XSD's own annotation instead names 'conflicting data from submitters' — a germline classification term retained from early submissions by a single consortium, not the aggregate conflict description.
+  SingleGermlineClassification.review_status: Aggregate review status (star rating) across all germline submissions for this record — NOT a per-submitter status; for that see ClassificationTypeScv.review_status.
+  SingleNoClassification.description: Why the record carries no classification. The value space is not enumerated in the XSD; see https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
+  SingleOncogenicityClassification.description: Record-level oncogenicity classification aggregated over all oncogenicity SCVs; same value space as AggregatedOncogenicityClassification.description. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
+  SingleOncogenicityClassification.explanation: Populated when the description is 'Conflicting classifications of oncogenicity'; the value enumerates the conflicting classifications with submission counts. The XSD's own annotation instead names 'conflicting data from submitters' — a germline classification term retained from early submissions by a single consortium, not the aggregate conflict description.
+  SingleOncogenicityClassification.review_status: Aggregate review status (star rating) across all oncogenicity submissions for this record — NOT a per-submitter status; for that see ClassificationTypeScv.review_status.
+  SingleSomaticClinicalImpact.description: Record-level somatic clinical impact aggregated over all somatic SCVs; same value space as AggregatedSomaticClinicalImpact.description. See https://github.com/ncbi/clinvar/blob/master/somatic_classifications/ClassificationOnClinVar.md.
+  SingleSomaticClinicalImpact.review_status: Aggregate review status (star rating) across all somatic clinical impact submissions for this record — NOT a per-submitter status; for that see ClassificationTypeScv.review_status.
   SoftwareSet: Description of software used in variant analysis, including version and purpose.
   SoftwareSet.purpose: Purpose of the software, e.g. 'alignment', 'variant calling', 'annotation'.
-  SomaticClinicalImpact.review_status: Aggregate review status (star rating) from all somatic clinical
-    impact submissions for this variant.
-  SubmitterReviewStatusValue: 'Review status of ONE submitted record (SCV). Stars per SCV: 4 ''practice
-    guideline''; 3 ''reviewed by expert panel''; 1 ''criteria provided, single submitter''; 0 ''no assertion
-    criteria provided'' and ''no classification provided''. There is no 2-star SCV value — ''criteria
-    provided, multiple submitters, no conflicts'' is computed only across SCVs (see AggregateGermlineReviewStatusValue).
-    ''flagged submission'' marks a record ClinVar has flagged; it does not contribute to the aggregate,
-    which then reports ''no classifications from unflagged records''. The remaining values are retained
-    for backward compatibility with clinvar_public.xsd.'
+  SomaticClinicalImpact.review_status: Aggregate review status (star rating) from all somatic clinical impact submissions for this variant.
+  SubmitterReviewStatusValue: 'Review status of ONE submitted record (SCV). Stars per SCV: 4 ''practice guideline''; 3 ''reviewed by expert panel''; 1 ''criteria provided, single submitter''; 0 ''no assertion criteria provided'' and ''no classification provided''. There is no 2-star SCV value — ''criteria provided, multiple submitters, no conflicts'' is computed only across SCVs (see AggregateGermlineReviewStatusValue). ''flagged submission'' marks a record ClinVar has flagged; it does not contribute to the aggregate, which then reports ''no classifications from unflagged records''. The remaining values are retained for backward compatibility with clinvar_public.xsd.'
   SubmitterType.submitter_name: Name of the person or organization submitting this batch of records.
-  TraitMapping.clinical_assertion_id: References clinical_assertion_list[i].id, linking this trait mapping
-    to a specific SCV.
-  TraitMapping.mapping_type: 'How the submitted trait was matched to a MedGen concept. MAPPING_TYPE_NAME:
-    matched by name (mapping_ref is ''Alternate'' or ''Preferred'', mapping_value is the submitted trait
-    name). MAPPING_TYPE_XREF: matched by database ID (mapping_ref is the database name, mapping_value
-    is the identifier).'
-  Triplosensitivity: ClinGen triplosensitivity score for this gene — evidence that gaining an extra copy
-    causes disease.
-  Triplosensitivity.clin_gen: URL to the ClinGen dosage sensitivity page for this gene's triplosensitivity
-    score.
-  Triplosensitivity.value: Triplosensitivity score description. E.g. 'No evidence available', 'Sufficient
-    evidence for dosage pathogenicity'.
-  VariationArchiveType: Top-level record for a classified variant in ClinVar. Each VCV (Variation Archive)
-    aggregates all submissions for a single variation (SimpleAllele, Haplotype, or Genotype). VCV accessions
-    have the format VCV + 9 digits + version suffix (e.g. VCV000000351.1).
-  VariationArchiveType.accession: VCV accession assigned to this variant record (e.g. VCV000000351). Paired
-    with version for the full versioned accession. Distinct from AlleleID (on the Allele element), which
-    identifies the underlying sequence change.
-  VariationArchiveType.classified_record: Classification data for a variant that was independently submitted
-    with its own classification. Contrast with included_record, which tracks variants referenced in submissions
-    but without their own independent classification.
+  TraitMapping.clinical_assertion_id: References clinical_assertion_list[i].id, linking this trait mapping to a specific SCV.
+  TraitMapping.mapping_type: 'How the submitted trait was matched to a MedGen concept. MAPPING_TYPE_NAME: matched by name (mapping_ref is ''Alternate'' or ''Preferred'', mapping_value is the submitted trait name). MAPPING_TYPE_XREF: matched by database ID (mapping_ref is the database name, mapping_value is the identifier).'
+  Triplosensitivity: ClinGen triplosensitivity score for this gene — evidence that gaining an extra copy causes disease.
+  Triplosensitivity.clin_gen: URL to the ClinGen dosage sensitivity page for this gene's triplosensitivity score.
+  Triplosensitivity.value: Triplosensitivity score description. E.g. 'No evidence available', 'Sufficient evidence for dosage pathogenicity'.
+  VariationArchiveType: Top-level record for a classified variant in ClinVar. Each VCV (Variation Archive) aggregates all submissions for a single variation (SimpleAllele, Haplotype, or Genotype). VCV accessions have the format VCV + 9 digits + version suffix (e.g. VCV000000351.1).
+  VariationArchiveType.accession: VCV accession assigned to this variant record (e.g. VCV000000351). Paired with version for the full versioned accession. Distinct from AlleleID (on the Allele element), which identifies the underlying sequence change.
+  VariationArchiveType.classified_record: Classification data for a variant that was independently submitted with its own classification. Contrast with included_record, which tracks variants referenced in submissions but without their own independent classification.
   VariationArchiveType.date_created: Date when this VCV first became public in ClinVar.
-  VariationArchiveType.date_last_updated: Date of the most recent change to this VCV, including SCV updates
-    and NCBI-added annotations. May change without incrementing the version number.
-  VariationArchiveType.included_record: A simple allele or haplotype incorporated into submissions for
-    this VCV, but submitted without an independent classification of its own. See IncludedRecord.
-  VariationArchiveType.most_recent_submission: Date of the most recently updated or newly added SCV for
-    this VCV.
+  VariationArchiveType.date_last_updated: Date of the most recent change to this VCV, including SCV updates and NCBI-added annotations. May change without incrementing the version number.
+  VariationArchiveType.included_record: A simple allele or haplotype incorporated into submissions for this VCV, but submitted without an independent classification of its own. See IncludedRecord.
+  VariationArchiveType.most_recent_submission: Date of the most recently updated or newly added SCV for this VCV.
   VariationArchiveType.record_status: 'Status of this VCV record: current, previous, replaced, deleted.'
-  VariationArchiveType.record_type: Whether this VCV was submitted with its own classification ('classified')
-    or only as part of a larger submitted set ('included'). The variation type is variation_type.
-  VariationArchiveType.replaced_by: The VCV accession that superseded this record (populated when record_status
-    is 'replaced').
+  VariationArchiveType.record_type: Whether this VCV was submitted with its own classification ('classified') or only as part of a larger submitted set ('included'). The variation type is variation_type.
+  VariationArchiveType.replaced_by: The VCV accession that superseded this record (populated when record_status is 'replaced').
   VariationArchiveType.replaced_list: VCV accessions that have been merged into this record.
-  VariationArchiveType.variation_name: ClinVar's preferred display name for this variant, as shown on
-    the website.
-  Xref: Database cross-reference (XRef) linking a concept to an identifier in an external database. Used
-    throughout to point to MedGen, OMIM, Orphanet, dbSNP, dbVar, and others.
+  VariationArchiveType.variation_name: ClinVar's preferred display name for this variant, as shown on the website.
+  Xref: Database cross-reference (XRef) linking a concept to an identifier in an external database. Used throughout to point to MedGen, OMIM, Orphanet, dbSNP, dbVar, and others.
   Xref.db: Name of the external database. E.g. MedGen, OMIM, Orphanet, Gene, Ensembl, HGNC, dbSNP.
-  Zygosity: 'Zygosity: Homozygote, SingleHeterozygote, CompoundHeterozygote, Hemizygote, not provided.
-    Used both for the asserted variant (CoOccurrenceType) and for a co-occurring allele (AlleleDescr).'
+  Zygosity: 'Zygosity: Homozygote, SingleHeterozygote, CompoundHeterozygote, Hemizygote, not provided. Used both for the asserted variant (CoOccurrenceType) and for a co-occurring allele (AlleleDescr).'
 flatten_list_wrappers: true
 inline_wrappers: true
