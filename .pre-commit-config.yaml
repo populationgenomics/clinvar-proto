@@ -47,9 +47,8 @@ repos:
   - repo: https://github.com/google/yamlfmt
     rev: v0.21.0
     hooks:
+      # The transforms file is included: its `comments:` values are now machine
+      # formatted, and yamlfmt preserves YAML comments, so the inline notes in
+      # the `build:` block survive a reformat. Enforcing the format here is what
+      # keeps it from drifting back by hand.
       - id: yamlfmt
-        # The transforms file is exempt: yamlfmt re-emits folded block scalars
-        # (`>-`) as single long lines, which would turn the hand-written schema
-        # documentation — the repo's main authored asset — into unreadable blobs
-        # and make every future edit a whole-paragraph diff.
-        exclude: '^clinvar_transforms\.yaml$'
