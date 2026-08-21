@@ -23,30 +23,10 @@ import sys
 
 import pytest
 
-_REPO_ROOT = pathlib.Path(__file__).parents[1]
 _RECORDS_DIR = pathlib.Path(__file__).parent / 'records'
 _RECORDS = sorted(_RECORDS_DIR.glob('*.xml'))
 
-
-@pytest.fixture(scope='module')
-def built_package(tmp_path_factory: pytest.TempPathFactory) -> pathlib.Path:
-    """Generate the package once via the xsdformer CLI; return the import root."""
-    out_dir = tmp_path_factory.mktemp('clinvar_build')
-    subprocess.run(
-        [
-            'xsdformer',
-            'build',
-            str(_REPO_ROOT / 'ClinVar_VCV_2.6.xsd'),
-            '--transforms',
-            str(_REPO_ROOT / 'clinvar_transforms.yaml'),
-            '--out-dir',
-            str(out_dir),
-        ],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    return out_dir
+# `built_package` is a session fixture in conftest.py, shared with the other generated-output gates.
 
 
 def test_records_present() -> None:
