@@ -6,7 +6,7 @@ default_language_version:
   python: python3.13
 
 # The vendored XSD and the record fixtures are upstream bytes: the XSD's MD5 is a
-# documented claim in the README, and the fixtures are what the round-trip gate
+# documented claim in the README, and the fixtures are what the record gate
 # asserts against. A whitespace rewrite would silently break both, so the
 # byte-touching hooks skip them.
 exclude: '^(ClinVar_VCV_.*\.xsd|tests/records/)'

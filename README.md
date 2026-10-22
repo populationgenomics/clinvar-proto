@@ -1,7 +1,7 @@
 # clinvar-proto
 
-Generates **`clinvar_proto`** — a typed Python package for parsing NCBI ClinVar VCV XML into protobuf and pydantic
-models — from the ClinVar VCV XSD.
+Generates **`clinvar_proto`** — a typed Python package for parsing NCBI ClinVar VCV XML into protobuf messages — from
+the ClinVar VCV XSD.
 
 This repository is the **generator**, not the package. It holds the inputs (`ClinVar_VCV_2.6.xsd`,
 `clinvar_transforms.yaml`) and drives [`xsd-former`](https://github.com/populationgenomics/xsd-former) (the `xsdformer`
@@ -20,29 +20,26 @@ pip install clinvar_proto      # or: uv add clinvar_proto
 
 ```python
 from lxml import etree
-from clinvar_proto import xml_converter, pydantic_converter, models
+from clinvar_proto import xml_converter
 
 tree = etree.parse('clinvar_release.xml')
 archive_el = tree.getroot().find('VariationArchive')
 
 proto = xml_converter.VariationArchiveType(archive_el)  # XML -> protobuf
-model = pydantic_converter.VariationArchiveType_from_proto(proto)  # protobuf -> pydantic
-json_str = model.model_dump_json()  # pydantic -> JSON
+data = proto.SerializeToString()  # protobuf wire bytes, for storage
 ```
 
 The converters take any ElementTree-like element, so `lxml` is the consumer's choice, not a dependency of the wheel
-(`clinvar_proto` needs only `protobuf` and `pydantic`). Release files are large, so consumers normally stream them with
+(`clinvar_proto` needs only `protobuf`). Release files are large, so consumers normally stream them with
 `lxml.etree.iterparse` on `VariationArchive` and convert one element at a time. Use lxml >= 6.1 if you do: earlier
 releases resolve external entities by default in `iterparse` (CVE-2026-41066).
 
-The package exposes four modules (all typed; ships `py.typed`):
+The package exposes two modules (both typed; ships `py.typed`):
 
-| module               | purpose                                                |
-| -------------------- | ------------------------------------------------------ |
-| `clinvar_pb2`        | compiled protobuf messages (`VariationArchiveType`, …) |
-| `models`             | pydantic models mirroring the protobuf schema          |
-| `xml_converter`      | ClinVar XML → protobuf (per-message factory funcs)     |
-| `pydantic_converter` | protobuf ↔ pydantic (`X_from_proto` / `X_to_proto`)    |
+| module          | purpose                                                |
+| --------------- | ------------------------------------------------------ |
+| `clinvar_pb2`   | compiled protobuf messages (`VariationArchiveType`, …) |
+| `xml_converter` | ClinVar XML → protobuf (per-message factory funcs)     |
 
 ## Developing the generator
 
@@ -52,7 +49,7 @@ Requires [`uv`](https://docs.astral.sh/uv/).
 make generate   # XSD + transforms -> generated/clinvar_proto/
 make build      # generate, then build the wheel into dist/
 make clean      # remove generated/ and dist/
-uv run --group test pytest   # round-trip gate over real ClinVar records
+uv run --group test pytest   # record gate over real ClinVar records
 ```
 
 Shaping the output is done in **`clinvar_transforms.yaml`** — inlining single- child wrappers, flattening list wrappers,
@@ -76,7 +73,7 @@ available from NCBI — fetch from NCBI directly for current data.
 The XSD is **vendored deliberately, not fetched at build time**: pinning the exact bytes keeps the generated schema
 reproducible, and NCBI's XSD version is bumped in place under a new filename rather than being immutable per release.
 When NCBI publishes a new version, re-vendor the file from <https://ftp.ncbi.nlm.nih.gov/pub/clinvar/xsd_public/>, point
-the `Makefile` and tests at it, regenerate, and run the round-trip gate.
+the `Makefile` and tests at it, regenerate, and run the record gate.
 
 ## Releasing
 

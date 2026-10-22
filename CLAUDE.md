@@ -26,17 +26,16 @@ the CPG standard (see `litfetch`).
 - **Version lives in `clinvar_transforms.yaml` (`build.version`)**, not in this repo's `pyproject.toml`. That is the
   version `xsdformer` stamps into the wheel and what the release tag must match.
 - **`xsd-former` is a build input.** A floor lives in `pyproject.toml`; the exact version is pinned in `uv.lock`.
-  Bumping it can change generated output, so re-run the round-trip gate after any bump.
+  Bumping it can change generated output, so re-run the record gate after any bump.
 - **The generated-output gates build via the `xsdformer` CLI** (the shipping path), from one session-scoped fixture in
-  `tests/conftest.py` shared by the round-trip, field-number, and gencode tests. They import the result in a subprocess
+  `tests/conftest.py` shared by the record, field-number, and gencode tests. They import the result in a subprocess
   because the compiled `*_pb2` registers in a global descriptor pool. Keep that isolation.
 - **A new upstream XSD version means a new filename.** `ClinVar_VCV_<n>.xsd` is referenced from the `Makefile`, the
   release workflow, and `tests/conftest.py` — update those three or generation breaks. Also refresh the version, date,
-  and MD5 in `README.md`'s provenance section, and the mentions in `CONTEXT.md` and `tests/test_roundtrip.py`'s
-  docstring.
+  and MD5 in `README.md`'s provenance section, and the mentions in `CONTEXT.md` and `tests/test_records.py`'s docstring.
 
 ## Before committing
 
-- `uv run --group test pytest` — the round-trip gate must pass.
+- `uv run --group test pytest` — the record gate must pass.
 - `uv run --group lint ruff check . && uv run --group lint ruff format --check .`
 - `uv lock` if dependencies changed, and commit `uv.lock`.
