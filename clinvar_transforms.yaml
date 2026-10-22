@@ -11,14 +11,13 @@ build:
     - 'Programming Language :: Python :: 3.13'
     - 'Topic :: Scientific/Engineering :: Bio-Informatics'
     - 'Typing :: Typed'
-  description: Typed protobuf + pydantic models and converters for NCBI ClinVar VCV XML.
+  description: Typed protobuf messages and an XML converter for NCBI ClinVar VCV XML.
   distribution_name: clinvar-proto
   keywords:
     - clinvar
     - ncbi
     - variant
     - protobuf
-    - pydantic
     - xml
     - bioinformatics
     - genomics
@@ -33,7 +32,7 @@ build:
   urls:
     Issues: https://github.com/populationgenomics/clinvar-proto/issues
     Repository: https://github.com/populationgenomics/clinvar-proto
-  version: 0.1.0
+  version: 0.2.0
 comments:
   Accession.date_deleted: The date the SCV was deleted.
   Accession.value: The accession of the deleted SCV.

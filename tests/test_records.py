@@ -1,12 +1,11 @@
-"""Round-trip gate over real ClinVar VCV records.
+"""Record gate over real ClinVar VCV records.
 
 This is clinvar-proto's release safety net: it builds the package from *this
 repo's* ``ClinVar_VCV_2.6.xsd`` + ``clinvar_transforms.yaml`` using the shipping
-path (the ``xsdformer`` CLI, exactly what ``make build`` runs), then checks that
-real NCBI ClinVar VCV records survive the full generated suite:
-
-* ``XML -> proto -> pydantic -> proto`` is identical in the proto, and
-* ``proto -> pydantic -> JSON -> pydantic`` round-trips in pydantic.
+path (the ``xsdformer`` CLI, exactly what ``make build`` runs), then converts
+real NCBI ClinVar VCV records with the generated ``xml_converter`` and checks
+that each ``VariationArchive`` comes out under the accession and variation ID
+its XML carries, with the classified or included record the XML has.
 
 An XSD or transform edit that breaks the generated wheel fails here before it
 can be published. Fixtures in ``records/`` are real ``efetch`` output, chosen to
@@ -34,27 +33,24 @@ def test_records_present() -> None:
 
 
 @pytest.mark.parametrize('record', _RECORDS, ids=lambda p: p.stem)
-def test_clinvar_record_roundtrip(record: pathlib.Path, built_package: pathlib.Path) -> None:
+def test_clinvar_record_converts(record: pathlib.Path, built_package: pathlib.Path) -> None:
     # Run in a subprocess so the dynamically compiled `*_pb2` (a global
     # descriptor-pool registration) stays isolated from the test process.
     script = f"""
 import sys
 sys.path.insert(0, {str(built_package)!r})
 from lxml import etree
-from clinvar_proto import xml_converter, pydantic_converter, models
+from clinvar_proto import xml_converter
 
 tree = etree.parse({str(record)!r})
 archive_el = tree.getroot().find("VariationArchive")
 assert archive_el is not None
 proto = xml_converter.VariationArchiveType(archive_el)
 
-# XML -> proto -> pydantic -> proto is identical in the proto.
-model = pydantic_converter.VariationArchiveType_from_proto(proto)
-assert pydantic_converter.VariationArchiveType_to_proto(model) == proto
-
-# proto -> pydantic -> JSON -> pydantic round-trips in pydantic.
-restored = models.VariationArchiveType.model_validate_json(model.model_dump_json())
-assert restored == model
+assert proto.accession == archive_el.get("Accession"), 'accession differs from the XML'
+assert proto.variation_id == int(archive_el.get("VariationID")), 'variation ID differs from the XML'
+for tag, field in (("ClassifiedRecord", "classified_record"), ("IncludedRecord", "included_record")):
+    assert proto.HasField(field) == (archive_el.find(tag) is not None), f'{{field}} presence differs from the XML'
 """
     result = subprocess.run(
         [sys.executable, '-c', script],

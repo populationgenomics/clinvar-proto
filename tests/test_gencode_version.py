@@ -38,7 +38,7 @@ def test_generated_pb2_imports_under_the_installed_runtime(built_package: pathli
     """The gencode protoc emitted must load under the protobuf the wheel is tested against.
 
     Run in a subprocess: importing the generated `_pb2` registers in a global descriptor pool, and
-    the round-trip gate does its own import in isolation for the same reason.
+    the record gate does its own import in isolation for the same reason.
     """
     pb2 = built_package / 'clinvar_proto' / 'clinvar_pb2.py'
     gencode = _gencode_version(pb2)

@@ -10,9 +10,9 @@ how consumers store, index, or query the parsed records.
 `clinvar_transforms.yaml`, `Makefile`, `pyproject.toml`. Its own distribution is `clinvar-proto-generator`; it is never
 published. *Avoid*: "the package" (that is the generated artifact, below).
 
-**Generated package** (`clinvar_proto`): The published, consumable artifact — protobuf + pydantic models + converters,
-emitted under `generated/` and built into a wheel. Gitignored; reproduced from the inputs on every build. *Avoid*:
-"clinvar-proto" (that is the generator repo).
+**Generated package** (`clinvar_proto`): The published, consumable artifact — compiled protobuf messages and an XML
+converter, emitted under `generated/` and built into a wheel. Gitignored; reproduced from the inputs on every build.
+*Avoid*: "clinvar-proto" (that is the generator repo).
 
 **Engine** (`xsd-former` / the `xsdformer` CLI): The external tool that turns an XSD + transform config into the
 generated package. Constrained by a floor in `pyproject.toml` and pinned to an exact version in `uv.lock`; upgrading it
@@ -35,6 +35,6 @@ holding the aggregate classifications plus every contributing SCV. This repo mod
 - The vendored XSD stays byte-identical to the upstream NCBI file, so the published MD5 verifies it. Never hand-patch
   the schema; express changes in the transforms.
 - `uv.lock` is committed: the artifact is only reproducible because the exact engine version is pinned there.
-- The round-trip gate (`tests/`) builds from the real inputs and must pass before a release — it is what stops an
+- The record gate (`tests/`) builds from the real inputs and must pass before a release — it is what stops an
   XSD/transform edit shipping a broken wheel. Its fixtures deliberately span the record shapes the schema branches on
   (simple allele, haplotype, diplotype, included record, somatic).

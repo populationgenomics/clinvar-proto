@@ -6,8 +6,8 @@ dependencies = []
 
 [dependency-groups]
 # Distribution is `xsd-former` on PyPI; it provides the `xsdformer` CLI.
-dev = ["xsd-former>=1.4.0"]
-# The round-trip test builds the package and imports it, so it needs the
+dev = ["xsd-former>=2.0.0"]
+# The record gate builds the package and imports it, so it needs the
 # generated package's runtime deps alongside pytest.
 #
 # protobuf is coupled to the `grpcio-tools` version pinned in uv.lock: protoc
@@ -19,11 +19,10 @@ dev = ["xsd-former>=1.4.0"]
 # is derived from the gencode protoc actually emitted, so it tracks a grpcio-tools
 # bump instead of going stale against it (populationgenomics/xsd-former#32).
 test = [
-  "xsd-former>=1.4.0",
+  "xsd-former>=2.0.0",
   "pytest",
   "lxml",
   "protobuf>=6.33.5",
-  "pydantic>=2",
 ]
 
 lint = ["ruff", "pre-commit"]
